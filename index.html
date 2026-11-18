@@ -3,249 +3,288 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta property="og:title" content="🇦🇺澳洲12天全家松弛行程｜四大一小6岁">
-<meta property="og:description" content="布里斯班进悉尼出｜只选塔龙加动物园，歌剧院看歌剧，节奏宽松不赶场">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://xxx.github.io/">
-<meta property="og:image" content="https://picsum.photos/id/1016/480/480">
-<title>澳洲东海岸12天｜四大一小｜布里斯班进‑悉尼出｜松弛版</title>
+<title>澳洲东海岸12天精简版｜四大一小｜布里斯班进‑悉尼出｜市中心便利住宿</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
-:root{--bg:#f8f9fa;--card:#ffffff;--text:#1d1d1f;--muted:#6e6e73;--accent:#007aff;--warn:#ff9500;--danger:#ff3b30;--success:#34c759;--sun:#ffc107;--rain:#4285F4;--border:rgba(0,0,0,0.12);--radius:18px;--shadow:0 8px 30px rgba(0,0,0,0.08);}
-*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;}
+:root{
+  --bg:#f7f5f2;
+  --card:#ffffff;
+  --text:#3a3a38;
+  --muted:#777775;
+  --line:#e4e2dd;
+  --accent:#7c7267;
+  --radius:14px;
+  --shadow:0 4px 16px rgba(0,0,0,0.05);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;}
 html{font-size:16px;-webkit-text-size-adjust:100% !important;}
-body{background:var(--bg);color:var(--text);padding-bottom:130px;}
-header{backdrop-filter:saturate(180%) blur(20px);background:rgba(255,255,255,0.72);position:sticky;top:0;z-index:1000;padding:14px 18px;border-bottom:1px solid var(--border);}
-h1{font-size:18px;font-weight:600;}
-.sub{font-size:13px;color:var(--muted);margin-top:3px;}
-#map{width:100%;height:50vh;margin:0;}
-.timeline{padding:16px 18px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;}
-.day-chip{flex:0 0 auto;padding:10px 14px;border-radius:14px;background:var(--card);box-shadow:var(--shadow);border:1px solid var(--border);scroll-snap-align:start;cursor:pointer;font-size:14px;font-weight:500;white-space:nowrap;}
-.day-chip.active{background:var(--accent);color:white;border-color:var(--accent);}
-.panel{margin:14px 18px;border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;}
-.panel-head{padding:14px 16px;border-bottom:1px solid var(--border);font-weight:600;font-size:16px;}
-.panel-body{padding:16px;line-height:1.8;}
+body{background:var(--bg);color:var(--text);padding-bottom:120px;line-height:1.7;}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:16px 20px;}
+h1{font-size:18px;font-weight:500;letter-spacing:0.5px;}
+.sub{font-size:13px;color:var(--muted);margin-top:4px;}
+#map{width:100%;height:46vh;border-bottom:1px solid var(--line);}
+.timeline{padding:16px 20px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;}
+.day-chip{flex:0 0 auto;padding:10px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line);scroll-snap-align:start;cursor:pointer;font-size:14px;font-weight:400;white-space:nowrap;color:var(--text);transition:0.2s;}
+.day-chip.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.panel{margin:12px 20px;border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;}
+.panel-head{padding:14px 18px;border-bottom:1px solid var(--line);font-weight:500;font-size:16px;}
+.panel-body{padding:18px;}
 .item{margin-bottom:16px;}
-.tag{display:inline-block;padding:3px 7px;border-radius:8px;font-size:11px;margin-right:5px;font-weight:500;color:#fff;}
-.tag-book{background:var(--danger);}
-.tag-food{background:var(--success);}
-.tag-trans{background:#5856d6;}
-.tag-photo{background:var(--warn);color:#000;}
-.tag-sun{background:var(--sun);color:#000;}
-.tag-rain{background:var(--rain);color:#fff;}
-.tag-relax{background:#9b59b6;color:#fff;}
-.tag-opera{background:#c41e3a;color:#fff;}
-a{color:var(--accent);text-decoration:none;word-break:break-all;}
-.foot-note{margin:14px 18px;font-size:12px;color:var(--muted);line-height:1.5;}
-ul{padding-left:18px;margin:6px 0;}
-table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0;}
-th,td{border:1px solid #ddd;padding:6px;}
-th{background:#eee;}
-.popup-mask{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
-.popup-box{background:#fff;border-radius:16px;max-width:340px;width:100%;padding:22px;}
-.popup-box h4{margin-bottom:10px;font-size:16px;}
-.popup-box p{font-size:14px;color:#444;line-height:1.6;margin-bottom:16px;}
-.popup-btn{width:100%;border:none;background:#007aff;color:#fff;padding:11px;border-radius:10px;font-size:15px;}
+.meta{display:inline-block;padding:2px 8px;border-radius:6px;font-size:12px;margin-right:6px;background:#f0ede8;color:var(--text);}
+a{color:var(--accent);text-decoration:none;word-break:break-all;border-bottom:1px dotted #d3cdc4;}
+a:hover{border-bottom-style:solid;}
+.foot-note{margin:14px 20px;font-size:12px;color:var(--muted);line-height:1.6;}
+ul{padding-left:20px;margin:8px 0;}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;}
+th,td{border:1px solid var(--line);padding:8px;}
+th{background:#f3f1ec;font-weight:500;}
 </style>
 </head>
 <body>
-<div id="mask" class="popup-mask">
-    <div class="popup-box">
-        <h4>📌打开行程提示</h4>
-        <p>微信内置浏览器地图会卡顿。<br>请复制链接，使用手机自带浏览器（Safari/Chrome）打开，地图、导航功能完整可用。</p>
-        <button class="popup-btn" onclick="document.getElementById('mask').style.display='none'">我知道了</button>
-    </div>
-</div>
-
 <header>
-    <h1>🇦🇺澳洲12天｜四大一小 松弛行程</h1>
-    <div class="sub">2027.01.24｜布里斯班进 → 悉尼出｜无密集赶路</div>
+  <h1>澳洲东海岸12天精简行程｜四大一小｜布里斯班进·悉尼出</h1>
+  <div class="sub">2027‑01‑24｜坪山‑蛇口‑香港飞布里斯班，悉尼直飞深圳返程｜住宿均在市中心，出行采购用餐便利｜无水上项目，节奏松弛</div>
 </header>
-
 <div id="map"></div>
-
-<div class="timeline" id="dayList">
-    <div class="day-chip active" data-day="d1">D1 抵达布里斯班</div>
-    <div class="day-chip" data-day="d2">D2 摩顿岛喂海豚</div>
-    <div class="day-chip" data-day="d3">D3 布里斯班慢逛</div>
-    <div class="day-chip" data-day="d4">D4 飞悉尼，入住休整</div>
-    <div class="day-chip" data-day="d5">D5 塔龙加动物园</div>
-    <div class="day-chip" data-day="d6">D6 悉尼市区闲逛</div>
-    <div class="day-chip" data-day="d7">D7 歌剧院看歌剧</div>
-    <div class="day-chip" data-day="d8">D8 蓝山 Scenic World</div>
-    <div class="day-chip" data-day="d9">D9 悉尼自由摆烂日</div>
-    <div class="day-chip" data-day="d10">D10 海边/市集慢游</div>
-    <div class="day-chip" data-day="d11">D11 采购伴手礼</div>
-    <div class="day-chip" data-day="d12">D12 返程</div>
+<div class="timeline" id="timeline"></div>
+<div class="panel">
+  <div class="panel-head" id="panel-title">选择上方日期查看详情</div>
+  <div class="panel-body" id="panel-content"></div>
 </div>
 
-<div id="d1" class="day-content">
-    <div class="panel">
-        <div class="panel-head">D1｜出发，抵达布里斯班</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-trans">交通</span>香港飞布里斯班，落地取车</div>
-            <div class="item"><span class="tag tag-relax">松弛</span>酒店休整，不安排景点</div>
-            <div class="item"><span class="tag tag-food">晚餐</span>附近简餐，早点休息调时差</div>
-        </div>
-    </div>
+<div class="panel">
+<div class="panel-head">🏨 住宿安排（市中心公寓，2‑3卧室）</div>
+<div class="panel-body">
+<ul>
+<li><b>布里斯班CBD｜近Central Station</b>｜紧邻火车站、Airtrain，楼下Woolworths/Coles、餐厅密集，去摩顿岛码头交通顺畅；全套厨房、洗烘一体机。</li>
+<li><b>悉尼岩石区CBD｜The Sebel Quay West Suites Sydney</b>｜步行可达歌剧院、环形码头轮渡站，药房、超市、咖啡馆集中。</li>
+</ul>
+<p>提示：公寓厨具齐全，油盐米面需要到超市自行采购。</p>
+</div>
 </div>
 
-<div id="d2" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D2｜摩顿岛（海豚岛）</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-book">务必预约</span>摩顿岛渡轮+住宿/一日游</div>
-            <div class="item"><span class="tag tag-sun">晴天</span>沙滩、滑沙、浅滩玩水</div>
-            <div class="item"><span class="tag tag-rain">雨天</span>室内馆休息，轻松摆烂</div>
-            <div class="item"><span class="tag tag-photo">傍晚</span>野生海豚喂食</div>
-        </div>
-    </div>
+<div class="panel">
+<div class="panel-head">🎫 景点预约清单</div>
+<div class="panel-body">
+<table>
+<tr>
+<th>景点名称</th>
+<th>官网</th>
+<th>购票方式</th>
+<th>备注</th>
+<th>预约优先级</th>
+</tr>
+<tr>
+<td>摩顿岛喂野生海豚</td>
+<td>https://www.tangalooma.com</td>
+<td>官网套票：渡轮+上岛+喂海豚</td>
+<td>名额紧张，提前45天预订；儿童同样占名额</td>
+<td>最高</td>
+</tr>
+<tr>
+<td>蓝山Scenic World三缆车</td>
+<td>https://scenicworld.com.au</td>
+<td>官网线上套票</td>
+<td>通票全天有效；只走短平木板路，不长途徒步</td>
+<td>建议提前</td>
+</tr>
+<tr>
+<td>塔龙加动物园</td>
+<td>https://taronga.org.au</td>
+<td>官网含往返渡轮家庭套票</td>
+<td>线上购票更划算；4岁以下免费，轮渡周末容易售罄</td>
+<td>高</td>
+</tr>
+<tr>
+<td>悉尼歌剧院演出</td>
+<td>https://www.sydneyoperahouse.com</td>
+<td>官网家庭票</td>
+<td>留意剧目年龄限制，大件行李需要寄存</td>
+<td>高</td>
+</tr>
+</table>
+<p>订餐厅：OpenTable https://www.opentable.com.au；部分餐厅取消不到会扣费。</p>
+</div>
 </div>
 
-<div id="d3" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D3｜布里斯班慢逛日（无强制景点）</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-relax">可选</span>南岸公园、植物园散步</div>
-            <div class="item"><span class="tag tag-food">brunch</span>本地咖啡馆慢慢吃</div>
-            <div class="item">累了就直接回酒店休息，不赶</div>
-        </div>
-    </div>
+<div class="panel">
+<div class="panel-head">🎒 行李准备</div>
+<div class="panel-body">
+<ul>
+<li>证件：护照、签证复印件；Visa芯片信用卡；少量澳元现金；澳洲电话卡；Google Maps、TripView Lite</li>
+<li>防晒：SPF50+防晒霜、防晒唇膏、儿童宽檐帽、墨镜、晴雨伞</li>
+<li>用品：澳标转换插头+插排、拖鞋、便携烧水壶；肠胃药、退烧药、创可贴、驱蚊液</li>
+<li>其他：孩子路上零食、充电宝</li>
+</ul>
+</div>
 </div>
 
-<div id="d4" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D4｜布里斯班 → 悉尼</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-trans">交通</span>内陆航班飞悉尼</div>
-            <div class="item"><span class="tag tag-relax">松弛</span>落地入住，环形码头简单散步看夜景</div>
-            <div class="item">晚上早点休息，为后面塔龙加养足精神</div>
-        </div>
-    </div>
-</div>
-
-<div id="d5" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D5｜塔龙加动物园（本次唯一动物园）</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-book">预约</span>动物园+往返渡轮套票</div>
-            <div class="item"><span class="tag tag-photo">亮点</span>长颈鹿机位，歌剧院+海港大桥同框，看考拉袋鼠</div>
-            <div class="item"><span class="tag tag-sun">晴天</span>慢慢逛、看飞鸟/海豹表演</div>
-            <div class="item"><span class="tag tag-rain">雨天</span>缩短游玩时间，早点返程</div>
-        </div>
-    </div>
-</div>
-
-<div id="d6" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D6｜悉尼市区闲逛</div>
-        <div class="panel-body">
-            <div class="item">岩石区、环形码头、皇家植物园散步拍照</div>
-            <div class="item"><span class="tag tag-food">打卡</span>澳洲brunch</div>
-            <div class="item">傍晚可以去歌剧院外围拍照，不进剧场</div>
-        </div>
-    </div>
-</div>
-
-<div id="d7" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D7｜🎭 悉尼歌剧院 听歌剧（重点日）</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-book">重点预约</span>歌剧演出门票，提前锁定档期</div>
-            <div class="item"><span class="tag tag-opera">提示</span>大背包、超过A4的包需要寄存；演出内禁止拍照录像</div>
-            <div class="item">下午轻松逛，傍晚提前抵达歌剧院，预留安检+寄存时间</div>
-            <div class="item"><span class="tag tag-relax">节奏</span>白天不安排耗体力项目，保存精力晚上看演出</div>
-        </div>
-    </div>
-</div>
-
-<div id="d8" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D8｜蓝山 Scenic World</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-book">预约</span>Scenic World缆车套票</div>
-            <div class="item"><span class="tag tag-sun">晴天</span>三姐妹峰观景，缆车体验</div>
-            <div class="item"><span class="tag tag-rain">雨天</span>云雾大，可改为市区休闲，取消蓝山</div>
-        </div>
-    </div>
-</div>
-
-<div id="d9" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D9｜悉尼自由摆烂日（完全留白）</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-relax">自选</span>睡懒觉、咖啡馆看书、酒店躺平</div>
-            <div class="item">补之前没来得及去的小店、美术馆</div>
-            <div class="item>不想出门就全天休息，无任务</div>
-        </div>
-    </div>
-</div>
-
-<div id="d10" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D10｜海边/市集慢游</div>
-        <div class="panel-body">
-            <div class="item">邦迪海滩、曼利海滩二选一，踩水散步</div>
-            <div class="item">附近市集逛逛，吃小吃</div>
-            <div class="item">累了随时返程，不强制走完</div>
-        </div>
-    </div>
-</div>
-
-<div id="d11" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D11｜采购伴手礼 + 休整</div>
-        <div class="panel-body">
-            <div class="item">超市、药房买巧克力、保健品伴手礼</div>
-            <div class="item">整理行李，早点休息</div>
-        </div>
-    </div>
-</div>
-
-<div id="d12" class="day-content" style="display:none;">
-    <div class="panel">
-        <div class="panel-head">D12｜悉尼返程</div>
-        <div class="panel-body">
-            <div class="item"><span class="tag tag-trans">交通</span>悉尼飞香港，再回深圳</div>
-            <div class="item">提前出发，预留充足值机、安检时间</div>
-        </div>
-    </div>
-</div>
-
-<div class="foot-note">
-🎫预约清单：摩顿岛渡轮、塔龙加动物园渡轮套票、歌剧院歌剧门票、蓝山Scenic World<br>
-🌤️1月澳洲夏季，午后容易阵雨；玩水务必水母服<br>
-🚗交通：布里斯班租车；悉尼市内公共交通Opal卡<br>
-🎭歌剧提示：提前查演出排期，看好儿童最低年龄要求
-</div>
+<div class="foot-note">说明：旺季为澳洲暑假叠加春节，核心项目务必提前锁定；晴天优先户外，雨天切换室内备选；疲惫可随时取消行程回公寓休息。</div>
 
 <script>
-// 地图初始化
-const map = L.map('map').setView([-27.4705, 153.026], 5);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+const map = L.map('map').setView([-28,153],5);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+const allMarkers = [];
 
-const points = [
-    {name:"布里斯班",lat:-27.4705,lng:153.026},
-    {name:"摩顿岛",lat:-27.172,lng:153.375},
-    {name:"悉尼",lat:-33.8688,lng:151.2093}
+const days = [
+{
+  name:"D1 1.24 出发｜坪山‑蛇口‑香港→布里斯班",
+  lat:-27.4680,lng:153.0230,
+  popupText:"D1｜抵达布里斯班CBD市中心，入住休整倒时差",
+  html:`
+  <div class="item"><span class="meta">交通指引</span>
+  <ul>
+    <li>坪山→蛇口邮轮母港，海天联运，行李直挂布里斯班，预留衔接至少3小时</li>
+    <li>机场Airtrain直达Central Station，出站即市中心，步行回公寓</li>
+  </ul>
+  </div>
+  <div class="item"><span class="meta">晴天方案</span>入住+楼下超市采购，街区轻松散步，无打卡任务</div>
+  <div class="item"><span class="meta">雨天备选</span>公寓休整，就近商圈逛吃</div>
+  <div class="item"><span class="meta">住宿</span>布里斯班CBD，近Central Station</div>
+  <div class="item"><span class="meta">附近餐食</span>亚洲菜馆、简餐西餐、面包咖啡店</div>`
+},
+{
+  name:"D2 1.25 摩顿岛喂野生海豚｜当日往返",
+  lat:-27.1785,lng:153.3720,
+  popupText:"D2｜摩顿岛喂海豚，不安排水上项目",
+  html:`
+  <div class="item"><span class="meta">预约提醒</span>提前45天官网订渡轮+喂海豚套票 <a href="https://www.tangalooma.com/" target="_blank">tangalooma.com</a></div>
+  <div class="item"><span class="meta">交通指引</span>市中心打车/公交前往Holt Street Wharf码头，船程75分钟；岛上班车代步，全程往返约6小时</div>
+  <div class="item"><span class="meta">晴天方案</span>沙丘休闲散步，傍晚投喂野生海豚</div>
+  <div class="item"><span class="meta">雨天/大风备选</span>昆士兰博物馆SparkLab儿童馆+市中心商圈</div>
+  <div class="item"><span class="meta">餐食</span>岛上简餐或自备零食</div>`
+},
+{
+  name:"D3 1.26 布里斯班｜休整留白",
+  lat:-27.4680,lng:153.0230,
+  popupText:"D3｜布里斯班CBD自由休整，不安排景点",
+  html:`
+  <div class="item"><span class="meta">节奏说明</span>缓冲休息日，不用赶行程</div>
+  <div class="item"><span class="meta">晴天方案</span>公寓做饭，街区闲逛、咖啡馆小坐</div>
+  <div class="item"><span class="meta">雨天备选</span>超市补货，公寓休息</div>
+  <div class="item"><span class="meta">餐食</span>在家做饭或楼下就近简餐</div>`
+},
+{
+  name:"D4 1.27 布里斯班→悉尼 ✈️ 入住岩石区",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D4｜布里斯班飞悉尼，抵达市中心休整",
+  html:`
+  <div class="item"><span class="meta">交通指引</span>国内航班飞往悉尼，落地火车直达市中心，办理入住后岩石区散步</div>
+  <div class="item"><span class="meta">晴天方案</span>岩石区慢走看海港</div>
+  <div class="item"><span class="meta">雨天备选</span>QVB商场逛吃</div>
+  <div class="item"><span class="meta">住宿</span>The Sebel Quay West Suites Sydney（岩石区CBD）</div>
+  <div class="item"><span class="meta">附近餐食</span>Sailors Thai、The Quay Bistro、Harry’s肉派</div>`
+},
+{
+  name:"D5 1.28 塔龙加动物园",
+  lat:-33.8432,lng:151.2410,
+  popupText:"D5｜塔龙加动物园，轮渡往返",
+  html:`
+  <div class="item"><span class="meta">预约提醒</span>官网购买含往返渡轮家庭套票 <a href="https://taronga.org.au" target="_blank">taronga.org.au</a></div>
+  <div class="item"><span class="meta">交通指引</span>环形码头坐渡轮直达，游玩约3小时，园区电瓶车代步</div>
+  <div class="item"><span class="meta">晴天方案</span>看考拉、袋鼠、长颈鹿，打卡港景同框机位</div>
+  <div class="item"><span class="meta">雨天备选</span>达令港SEA LIFE水族馆</div>
+  <div class="item"><span class="meta">餐食</span>Pancakes on the Rocks松饼店</div>`
+},
+{
+  name:"D6 1.29 悉尼歌剧院｜观看演出",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D6｜歌剧院看演出，本日重点",
+  html:`
+  <div class="item"><span class="meta">预约提醒</span>官网选购适合儿童的剧目 <a href="https://www.sydneyoperahouse.com" target="_blank">sydneyoperahouse.com</a></div>
+  <div class="item"><span class="meta">交通指引</span>白天在市中心轻松活动，傍晚步行前往歌剧院，预留安检寄存时间</div>
+  <div class="item"><span class="meta">晴天方案</span>岩石区慢逛，看完演出欣赏海港夜景</div>
+  <div class="item"><span class="meta">雨天备选</span>澳大利亚博物馆室内参观</div>
+  <div class="item"><span class="meta">餐食</span>演出前简餐，可打包肉派、松饼</div>`
+},
+{
+  name:"D7 1.30 蓝山Scenic World三缆车｜当日往返",
+  lat:-33.7204,lng:150.3122,
+  popupText:"D7｜蓝山三缆车观景，不徒步",
+  html:`
+  <div class="item"><span class="meta">预约提醒</span>官网套票 <a href="https://scenicworld.com.au/" target="_blank">scenicworld.com.au</a></div>
+  <div class="item"><span class="meta">交通指引</span>中央车站火车或包车出发；只走短平木板路，傍晚返回悉尼CBD</div>
+  <div class="item"><span class="meta">晴天方案</span>三段缆车，空中缆车俯瞰三姐妹峰</div>
+  <div class="item"><span class="meta">大风停运备选</span>悉尼美术馆、博物馆室内参观</div>
+  <div class="item"><span class="meta">餐食</span>Katoomba小镇简餐</div>`
+},
+{
+  name:"D8 1.31 悉尼｜机动留白A",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D8｜自由机动，补项目或休息",
+  html:`
+  <div class="item"><span class="meta">节奏说明</span>缓冲休息日</div>
+  <div class="item"><span class="meta">晴天方案</span>达令港闲逛、咖啡馆休息</div>
+  <div class="item"><span class="meta">雨天备选</span>室内展馆、商场闲逛</div>
+  <div class="item"><span class="meta">餐食</span>楼下餐厅随心选</div>`
+},
+{
+  name:"D9 2.1 悉尼｜机动留白B",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D9｜第二个留白日，节奏自定",
+  html:`
+  <div class="item"><span class="meta">节奏说明</span>预留充足休息，避免疲劳</div>
+  <div class="item"><span class="meta">晴天方案</span>市中心散步、海边吹风</div>
+  <div class="item"><span class="meta">雨天备选</span>公寓做饭、超市采购</div>
+  <div class="item"><span class="meta">餐食</span>在家做饭或就近简餐</div>`
+},
+{
+  name:"D10 2.2 伴手礼采购",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D10｜药房、超市采购伴手礼，整理行李",
+  html:`
+  <div class="item"><span class="meta">交通指引</span>市中心步行采购，Woolworths、药房、伴手礼店集中</div>
+  <div class="item"><span class="meta">晴天方案</span>岩石区、QVB沿线散步采购</div>
+  <div class="item"><span class="meta">雨天备选</span>商场一站式采购</div>`
+},
+{
+  name:"D11 2.3 悉尼休整，准备返程",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D11｜轻松休整，不安排远途",
+  html:`
+  <div class="item"><span class="meta">节奏说明</span>最后调整休息，不赶路</div>
+  <div class="item"><span class="meta">晴天方案</span>就近散步，补买遗漏物品</div>
+  <div class="item"><span class="meta">雨天备选</span>公寓休息</div>`
+},
+{
+  name:"D12 2.4 悉尼直飞深圳宝安｜返回坪山",
+  lat:-33.9461,lng:151.1808,
+  popupText:"D12｜悉尼机场返程，旅程结束",
+  html:`
+  <div class="item"><span class="meta">交通指引</span>市中心公寓火车或打车前往机场，不赶早班机</div>
+  <div class="item">从容乘机，直飞深圳宝安，回到坪山</div>
+  <div class="item">全程优先全家舒适，不追求打卡满额</div>`
+}
 ];
-points.forEach(p=>L.marker([p.lat,p.lng]).addTo(map).bindPopup(p.name));
 
-// 天数切换
-const chips = document.querySelectorAll('.day-chip');
-const contents = document.querySelectorAll('.day-content');
-chips.forEach(chip=>{
-    chip.onclick = ()=>{
-        chips.forEach(c=>c.classList.remove('active'));
-        chip.classList.add('active');
-        const target = chip.dataset.day;
-        contents.forEach(box=>box.style.display='none');
-        document.getElementById(target).style.display='block';
-    }
+days.forEach(d=>{
+  const marker = L.marker([d.lat, d.lng]).addTo(map).bindPopup(`<b>${d.name}</b><br/>${d.popupText}`);
+  allMarkers.push(marker);
 })
+
+const timeline = document.getElementById('timeline');
+const panelTitle = document.getElementById('panel-title');
+const panelContent = document.getElementById('panel-content');
+
+days.forEach((d,i)=>{
+  const chip = document.createElement('div');
+  chip.className = "day-chip";
+  chip.innerText = d.name;
+  chip.onclick = ()=>{
+    document.querySelectorAll('.day-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    map.setView([d.lat,d.lng],9);
+    panelTitle.innerText = d.name;
+    panelContent.innerHTML = d.html;
+  };
+  timeline.appendChild(chip);
+})
+
+if(allMarkers.length>0){
+  const fg = L.featureGroup(allMarkers);
+  map.fitBounds(fg.getBounds(),{padding:[40,40]});
+}
 </script>
 </body>
 </html>
