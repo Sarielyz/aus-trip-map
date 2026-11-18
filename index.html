@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>澳洲东海岸12天｜四大一小｜布里斯班进‑悉尼出｜松弛天气自适应</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#f8f9fa;--card:#ffffff;--text:#1d1d1f;--muted:#6e6e73;--accent:#007aff;--warn:#ff9500;--danger:#ff3b30;--success:#34c759;--sun:#ffc107;--rain:#4285F4;--border:rgba(0,0,0,0.12);--radius:18px;--shadow:0 8px 30px rgba(0,0,0,0.08);}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;}
+html{font-size:16px;-webkit-text-size-adjust:100% !important;}
+body{background:var(--bg);color:var(--text);padding-bottom:130px;}
+header{backdrop-filter:saturate(180%) blur(20px);background:rgba(255,255,255,0.72);position:sticky;top:0;z-index:1000;padding:14px 18px;border-bottom:1px solid var(--border);}
+h1{font-size:18px;font-weight:600;}
+.sub{font-size:13px;color:var(--muted);margin-top:3px;}
+#map{width:100%;height:50vh;margin:0;}
+.timeline{padding:16px 18px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;}
+.day-chip{flex:0 0 auto;padding:10px 14px;border-radius:14px;background:var(--card);box-shadow:var(--shadow);border:1px solid var(--border);scroll-snap-align:start;cursor:pointer;font-size:14px;font-weight:500;white-space:nowrap;}
+.day-chip.active{background:var(--accent);color:white;border-color:var(--accent);}
+.panel{margin:14px 18px;border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;}
+.panel-head{padding:14px 16px;border-bottom:1px solid var(--border);font-weight:600;font-size:16px;}
+.panel-body{padding:16px;line-height:1.8;}
+.item{margin-bottom:16px;}
+.tag{display:inline-block;padding:3px 7px;border-radius:8px;font-size:11px;margin-right:5px;font-weight:500;color:#fff;}
+.tag-book{background:var(--danger);}
+.tag-food{background:var(--success);}
+.tag-trans{background:#5856d6;}
+.tag-photo{background:var(--warn);color:#000;}
+.tag-sun{background:var(--sun);color:#000;}
+.tag-rain{background:var(--rain);color:#fff;}
+.tag-relax{background:#9b59b6;color:#fff;}
+a{color:var(--accent);text-decoration:none;word-break:break-all;}
+.foot-note{margin:14px 18px;font-size:12px;color:var(--muted);line-height:1.5;}
+ul{padding-left:18px;margin:6px 0;}
+table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0;}
+th,td{border:1px solid #ddd;padding:6px;}
+th{background:#eee;}
+</style>
+</head>
+<body>
+<header>
+  <h1>澳洲东海岸12天｜四大一小｜布里斯班进‑悉尼出｜松弛天气自适应</h1>
+  <div class="sub">2027‑01‑24｜坪山‑蛇口‑香港飞布里斯班；悉尼直飞深圳宝安返程；☀️晴天户外🌧️下雨室内备选；💤累可随时摆烂；公寓全套厨卫洗烘；1‑2月务必携带水母服</div>
+</header>
+<div id="map"></div>
+<div class="timeline" id="timeline"></div>
+<div class="panel">
+  <div class="panel-head" id="panel-title">选择上方日期查看详情｜地图显示全部点位</div>
+  <div class="panel-body" id="panel-content"></div>
+</div>
+
+<div class="panel">
+<div class="panel-head">🏨全程公寓（Booking/Airbnb，选2‑3卧室，4‑5人）</div>
+<div class="panel-body">
+<ul>
+<li><b>布里斯班南岸：Soda Apartments South Brisbane</b>｜近Airtrain火车站，去摩顿岛码头方便；全套厨房、洗碗机、洗烘一体机。</li>
+<li><b>黄金海岸Broadbeach：Avani Broadbeach Residences</b>｜轻轨300米，临近Pacific Fair大超市买菜。</li>
+<li><b>拜伦湾：Outrigger Bay Apartments</b>｜市中心，步行海滩、超市。</li>
+<li><b>悉尼岩石区：The Sebel Quay West Suites Sydney</b>｜步行歌剧院、环形码头轮渡站。</li>
+</ul>
+<p><b>提示：公寓锅碗齐全，油盐米面需要Woolworths/Coles超市自行采购。</b></p>
+</div>
+</div>
+
+<div class="panel">
+<div class="panel-head">🎫景点购票清单｜官网+最优惠购买渠道</div>
+<div class="panel-body">
+<table>
+<tr>
+<th>景点名称</th>
+<th>官方网址</th>
+<th>最划算购买方式</th>
+<th>备注说明</th>
+<th>预约等级</th>
+</tr>
+<tr>
+<td>摩顿岛Tangalooma喂海豚</td>
+<td>https://www.tangalooma.com</td>
+<td>官网直接买套票【渡轮+上岛+喂海豚】</td>
+<td>喂海豚名额稀缺，提前45天订；儿童同样占名额，现场无捡漏</td>
+<td>🔴最高优先级</td>
+</tr>
+<tr>
+<td>龙柏考拉保护区</td>
+<td>https://lonepinekoalasanctuary.com/tickets‑membership/</td>
+<td>官网家庭套票</td>
+<td>考拉合影额外付费，不含大门票；线上扫码入园</td>
+<td>🟡建议提前</td>
+</tr>
+<tr>
+<td>可伦宾野生动物保护区</td>
+<td>https://currumbinsanctuary.com.au</td>
+<td>官网家庭套票</td>
+<td>套票含园区小火车；儿童3‑13岁优惠</td>
+<td>🟡建议提前</td>
+</tr>
+<tr>
+<td>华纳兄弟电影世界</td>
+<td>https://movieworld.com.au/tickets/3‑day‑multi‑park‑pass</td>
+<td>官网7天多园通票</td>
+<td>7天可进华纳、海洋世界、狂野水世界，比单买省40+澳元</td>
+<td>🔴旺季提前</td>
+</tr>
+<tr>
+<td>蓝山Scenic World三缆车</td>
+<td>https://scenicworld.com.au</td>
+<td>官网线上套票</td>
+<td>通票全天可用；谷底只走500m短木板平路，拒绝长徒步；大风会停运</td>
+<td>🟡建议提前</td>
+</tr>
+<tr>
+<td>塔龙加动物园（悉尼）</td>
+<td>https://taronga.org.au</td>
+<td>官网含往返渡轮家庭套票</td>
+<td>线上比现场便宜约20AUD；4岁以下免费；套票自带轮渡</td>
+<td>🔴周末暑假轮渡易售罄</td>
+</tr>
+<tr>
+<td>悉尼歌剧院内部导览</td>
+<td>https://www.sydneyoperahouse.com/visit/tours</td>
+<td>官网家庭票</td>
+<td>5‑15岁儿童票，5岁以下免费；旺季当日无票</td>
+<td>🔴必须提前预约</td>
+</tr>
+</table>
+<p>🍽订餐厅工具：<b>OpenTable网页/App</b> https://www.opentable.com.au；也可以直接Google地图点Reserve按钮预约；部分高端餐厅信用卡担保，NO‑SHOW扣费。</p>
+</div>
+</div>
+
+<div class="panel">
+<div class="panel-head">🎒出行必带行李清单</div>
+<div class="panel-body">
+<ul>
+<li><b>证件钱财：</b>护照签证纸质副本；Visa芯片信用卡；少量澳元现金200‑300AUD；澳洲电话卡；下载Google Maps、TripView Lite查公交。</li>
+<li><b>防晒海边（1‑2月水母季）：</b>SPF50+珊瑚友好防晒霜、防晒润唇膏；宽檐儿童防晒帽；<b>全家水母服必带</b>；墨镜；便携晴雨伞（午后多阵雨）。</li>
+<li><b>生活用品：</b>澳标三孔转换插头+插排；拖鞋（澳洲公寓不提供拖鞋）；便携烧水壶；肠胃药、退烧药、创可贴、驱蚊液。</li>
+<li><b>其他：</b>孩子零食长途备用；手机充电设备。</li>
+</ul>
+</div>
+</div>
+
+<div class="foot-note">⚠️旺季澳洲暑假叠加春节；🔴标记项目务必提前锁票；☀️晴天执行户外，🌧️下雨切换室内备选；<span class="tag tag-relax">💤松弛提示</span>疲惫随时取消项目回公寓休息；国内地图瓦片加载慢，文字链接全部正常，澳洲本地网络地图完整显示</div>
+<script>
+const map = L.map('map').setView([-28,153],5);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+const allMarkers = [];
+
+const days = [
+{
+  name:"D1 1.24 出发｜坪山‑蛇口‑香港→布里斯班",
+  lat:-27.4740,lng:153.0130,
+  popupText:"D1｜抵达布里斯班南岸｜住Soda公寓｜下一站D2摩顿岛",
+  html:`
+  <div class="item"><span class="tag tag-trans">🚦路标指引</span>
+  <ul>
+    <li>坪山通勤蛇口邮轮母港；海天联运坐船50分钟直达香港机场禁区，行李直挂布里斯班，不用入境香港；预留衔接至少3小时。</li>
+    <li>布里斯班机场Airtrain火车直达南岸，步行到公寓。</li>
+  </ul>
+  </div>
+  <div class="item"><span class="tag-sun">☀️晴天方案</span>办理入住；Woolworths采购食材；南岸河边简单散步，无硬性打卡。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>公寓休整，南岸Fish Lane商圈逛吃。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：今天无游玩任务，累直接躺公寓。</span></div>
+  <div class="item">🏨住宿：Soda Apartments South Brisbane（布里斯班南岸）</div>
+  <div class="item">📍公寓Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Soda+Apartments+South+Brisbane" target="_blank">打开导航</a></div>
+  <div class="item"><span class="tag-food">🍴布里斯班南岸餐厅3选</span>
+  <ul>
+    <li>1.River Quay Fish｜河景海鲜，OpenTable预约；避雷日落窗边位极抢手</li>
+    <li>2.Julius Pizzeria(Fish Lane)｜意式披萨，适合大家庭，周末建议预约</li>
+    <li>3.Momo No Ki｜平价日料拉面，无需预约，简餐友好</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D2 1.25【高趣味】摩顿岛Tangalooma喂野生海豚｜布里斯班当日往返",
+  lat:-27.1785,lng:153.3720,
+  popupText:"D2｜摩顿岛当日往返｜下一站D3龙柏考拉+买手信",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴最高优先级提前45天订</span>摩顿岛渡轮+喂海豚套票 <a href="https://www.tangalooma.com/" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>Holt Street Wharf码头坐渡轮75分钟上岛；选宽松班次，不赶最早一班；岛上免费班车代步，无私家车，总耗时含往返约6h。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>滑沙（班车直达沙丘顶部不用爬山）；沙滩躺平休闲；傍晚工作人员带领投喂野生海豚；主打海岛松弛，不用到处打卡。</div>
+  <div class="item"><span class="tag-rain">🌧️海面大风渡轮取消备选</span>改为龙柏考拉保护区一日游。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：岛上以休息为主，不必跑遍全部点位。</span></div>
+  <div class="item">Tangalooma Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Tangalooma+Island+Resort+Moreton+Island" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴岛上餐厅3选</span>
+  <ul>
+    <li>1.Beach Cafe｜沙滩简餐披萨汉堡，无需预约，岛上物价偏高</li>
+    <li>2.The Indus｜岛上高级西餐，晚间营业，官网必须预约，取消扣费</li>
+    <li>3.自备零食：公寓提前装好零食上岛，减少高价消费</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D3 1.26 布里斯班｜龙柏考拉保护区｜下午采购手信",
+  lat:-27.4740,lng:153.0130,
+  popupText:"D3｜龙柏考拉+采购｜下一站D4前往黄金海岸Broadbeach",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴建议提前购票</span>龙柏考拉保护区 <a href="https://lonepinekoalasanctuary.com/tickets‑membership/" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙10点出门；南岸坐430公交40分钟到园区；包车25分钟；园区小火车代步，游玩约3h；中午回公寓午休；下午悠闲采购澳洲手信。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>看考拉、鸭嘴兽；傍晚Howard Smith Wharves河边散步，散步可以直接取消。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>龙柏大量遮雨棚仍可游玩；下午QSM昆士兰博物馆SparkLab儿童科学馆+商场买伴手信。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：河边散步不想去直接砍掉。</span></div>
+  <div class="item">Lone Pine Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Lone+Pine+Koala+Sanctuary+Brisbane" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴布里斯班南岸餐厅3选</span>
+  <ul>
+    <li>1.The Ship Inn｜河畔酒馆澳洲本地菜，周末建议OpenTable预约</li>
+    <li>2.Pizzeria Violetta｜意式披萨分量大，可walk‑in</li>
+    <li>3.Gelato Messina｜网红冰淇淋，饭后甜品</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D4 1.27 布里斯班→黄金海岸Broadbeach｜Tallebudgera浅滩+Q1可选",
+  lat:-28.1010,lng:153.4350,
+  popupText:"D4｜黄金海岸Broadbeach｜住Avani公寓｜下一站D5可伦宾野生动物保护区",
+  html:`
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙睡饱再出发；G:link轻轨转Airtrain火车约1h20min；包车1h10min；抵达办理入住，公寓午休。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>Tallebudgera平静内河浅滩玩水2h；傍晚可选Q1观景台看日落，不想上去直接沙滩散步替代。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>Pacific Fair超大购物中心，亲子游乐区逛吃。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：累直接取消观景台沙滩躺平。</span></div>
+  <div class="item">🏨住宿：Avani Broadbeach Residences</div>
+  <div class="item">Tallebudgera Creek Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Tallebudgera+Creek+Gold+Coast" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴Broadbeach餐厅3选</span>
+  <ul>
+    <li>1.Cora Restaurant｜地中海融合菜，周末OpenTable预约；周四周五儿童餐半价</li>
+    <li>2.The Fish House｜高端海鲜，必须预约，取消有罚金</li>
+    <li>3.Betty’s Burgers｜平价网红汉堡，无需预约，出餐快</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D5 1.28【高趣味】黄金海岸｜可伦宾野生动物保护区",
+  lat:-28.1325,lng:153.4722,
+  popupText:"D5｜可伦宾保护区｜下一站D6华纳兄弟电影世界",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴建议提前购票</span>可伦宾野生动物保护区 <a href="https://currumbinsanctuary.com.au" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙10点出门；Broadbeach坐700公交30分钟；包车15分钟；园区小火车代步，游玩约3h。⚠️昆士兰法律儿童不能抱考拉，仅付费合影。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>喂彩虹鹦鹉、散养袋鼠互动、考拉付费合影；中午园区简餐或回公寓午休。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>华纳兄弟电影世界优先室内表演、卡通互动。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：孩子状态差，缩短游玩时间提前回公寓。</span></div>
+  <div class="item">Currumbin Sanctuary Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Currumbin+Wildlife+Sanctuary" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴可伦宾周边餐厅3选</span>
+  <ul>
+    <li>1.Currumbin Surf Club｜海景简餐，walk‑in性价比高，中午座位紧张</li>
+    <li>2.Social Eating House｜融合菜家庭友好，周末建议预约</li>
+    <li>3.Gelato Republic｜冰淇淋甜品店，无需预约</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D6 1.29【高趣味】黄金海岸｜华纳兄弟电影世界",
+  lat:-27.9058,lng:153.3112,
+  popupText:"D6｜华纳电影世界｜下一站D7前往拜伦湾",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴旺季提前购票</span>华纳7天多园通票 <a href="https://movieworld.com.au/tickets/3‑day‑multi‑park‑pass" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙10点出门；Broadbeach坐740公交往返50分钟；包车35分钟；游玩3‑3.5h。主动避开成人刺激过山车，只玩卡通村+巡游。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外为主】</span>卡通人物巡游，Looney Tunes儿童专区，玩累随时坐下休息，可以提前离场，不必待到闭园。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>乐园室内剧场、4D影院正常开放；极端暴雨直接回公寓。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：疲惫随时撤退回公寓。</span></div>
+  <div class="item">Movie World Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Movie+World+Gold+Coast" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴乐园出口Oasis购物中心3选</span>
+  <ul>
+    <li>1.中式大排档简餐｜适合中国胃，无需预约</li>
+    <li>2.Guzman y Gomez｜墨西哥简餐，出餐快</li>
+    <li>3.Domino’s披萨｜外卖带回公寓吃</li>
+  </ul>
+  <div class="item">📌附加可选项目（精力极好+晴天才去，不强求）：春溪萤火虫夜游，只能包车；下雨/疲惫直接放弃。</div>
+  </div>`
+},
+{
+  name:"D7 1.30 黄金海岸→拜伦湾｜灯塔停车打卡+Wategos浅滩+小镇",
+  lat:-28.6394,lng:153.6168,
+  popupText:"D7｜拜伦湾｜住Outrigger Bay公寓｜下一站D8飞Ballina→悉尼",
+  html:`
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙睡够出发；Greyhound大巴约1h30min；包车整车220AUD约1h05min；抵达公寓午休。导航直接到灯塔停车场，**禁止徒步上山**。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>灯塔停车场拍照40分钟；Wategos Beach浅滩玩水2h；下午小镇慢悠悠逛街喝咖啡。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>拜伦湾手作市集+咖啡馆休整。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：不想出门阳台发呆看海也OK。</span></div>
+  <div class="item">🏨住宿：Outrigger Bay Apartments（拜伦湾市中心）</div>
+  <div class="item">Cape Byron Lighthouse Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Cape+Byron+Lighthouse+car+park" target="_blank">导航（停车场）</a></div>
+  <div class="item"><span class="tag-food">🍴拜伦湾餐厅3选</span>
+  <ul>
+    <li>1.Beach Byron Bay｜一线海景海鲜，必须预约，取消罚100AUD/人；优先订午餐光线好</li>
+    <li>2.Byron Bay Baker｜Brunch面包咖啡，无需预约，早8‑10点人流高峰</li>
+    <li>3.The Roadhouse｜汉堡简餐，性价比高，walk‑in友好</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D8 1.31 ✈️拜伦湾‑Ballina机场飞悉尼｜住悉尼岩石区",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D8｜抵达悉尼｜住Sebel公寓｜下一站D9塔龙加动物园",
+  html:`
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>拜伦湾shuttle巴士30分钟到Ballina机场；澳洲国内航班飞往悉尼；抵达办理入住；岩石区简单溜达休整。</div>
+  <div class="item"><span class="tag-sun">☀️晴天方案</span>岩石区街区散步闲逛。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>QVB商场逛吃。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：飞行休整日，无硬性任务。</span></div>
+  <div class="item">🏨住宿：The Sebel Quay West Suites Sydney（岩石区环形码头）</div>
+  <div class="item">📍公寓Google地图：<a href="https://www.google.com/maps/search/?api=1&query=The+Sebel+Quay+West+Suites+Sydney" target="_blank">打开导航</a></div>
+  <div class="item"><span class="tag-food">🍴岩石区餐厅3选</span>
+  <ul>
+    <li>1.Sailors Thai｜泰餐，周末晚餐OpenTable强制预约，辣度偏高，可点儿童餐</li>
+    <li>2.The Quay Bistro｜海港简餐，提供儿童餐，排队约30‑45分钟</li>
+    <li>3.Harry’s Café de Wheels｜澳洲传统肉派路边小店，无需预约</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D9 2.1【高趣味】悉尼｜塔龙加动物园",
+  lat:-33.8432,lng:151.2410,
+  popupText:"D9｜塔龙加动物园｜下一站D10歌剧院+皇家植物园",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴提前购票｜含往返渡轮套票</span>塔龙加动物园 <a href="https://taronga.org.au/" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙10点出门；环形码头坐渡轮12分钟直达动物园；游玩约3h；园区电瓶车代步，全程平路。<b>12:30返回公寓午休避开正午暴晒</b>。下午可选皇家植物园散步，不想去直接跳过。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>看考拉袋鼠，拍考拉+悉尼港同框；下午可选植物园散步。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>达令港SEA LIFE水族馆+WILD LIFE室内动物园套票。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：孩子状态差，下午直接取消回公寓。</span></div>
+  <div class="item">Taronga Zoo Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Taronga+Zoo+Sydney" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴岩石区周边餐厅3选</span>
+  <ul>
+    <li>1.Pancakes on the Rocks｜老牌松饼店，小孩最爱，周末排队久优先工作日中午</li>
+    <li>2.ManOwar Steps Café｜海边简餐人少，walk‑in</li>
+    <li>3.Caffè Amici｜平价意面，无需预约</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D10 2.2 悉尼｜歌剧院+皇家植物园+鱼市场",
+  lat:-33.8568,lng:151.2153,
+  popupText:"D10｜悉尼市区｜下一站D11蓝山Scenic World当日往返",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴必须提前预约</span>悉尼歌剧院内部导览 <a href="https://www.sydneyoperahouse.com/visit/tours" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙10点出门；公寓步行6分钟歌剧院；导览1.5h；步行5分钟皇家植物园；中午回公寓午休；下午岩石区闲逛，鱼市场采购海鲜可以带回公寓做饭。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>歌剧院导览；麦考利夫人石椅拍照；鱼市场采购海鲜。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨备选</span>澳大利亚博物馆，恐龙化石展厅室内遛娃。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：不想外出直接公寓躺平。</span></div>
+  <div class="item">歌剧院Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Sydney+Opera+House+Bennelong+Point" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴岩石区+鱼市场3选</span>
+  <ul>
+    <li>1.Sailors Thai｜泰餐，周末晚餐强制预约</li>
+    <li>2.Peter’s Seafood（鱼市场）｜生蚝龙虾，11:30‑13:00排队极长，错峰前往</li>
+    <li>3.The Quay Bistro｜海港简餐，有儿童餐</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D11 2.3 蓝山 Scenic World三缆车｜当日返回悉尼公寓",
+  lat:-33.7204,lng:150.3122,
+  popupText:"D11｜蓝山当日往返｜下一站D12悉尼机场直飞深圳宝安",
+  html:`
+  <div class="item"><span class="tag tag-book">🔴建议提前购票</span>蓝山Scenic World套票 <a href="https://scenicworld.com.au/" target="_blank">官网链接</a></div>
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>🕙9点出发；悉尼中央车站火车到Katoomba约2h；包车1h40min；谷底只走500m短木板平路约10分钟，拒绝长徒步；游玩3‑3.5h；傍晚返回悉尼不留宿蓝山。</div>
+  <div class="item"><span class="tag-sun">☀️晴天【室外】</span>三段缆车，Skyway空中缆车看三姐妹峰全景。</div>
+  <div class="item"><span class="tag-rain">🌧️下雨/大风缆车停运备选</span>Featherdale野生动物园就近游玩。</div>
+  <div class="item"><span class="tag-relax">💤松弛提示：全家疲惫直接放弃蓝山。</span></div>
+  <div class="item">Scenic World Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Scenic+World+Blue+Mountains" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-food">🍴Katoomba小镇餐厅3选</span>
+  <ul>
+    <li>1.Avalon Restaurant｜西餐，周二休息，建议预约，提供儿童炸鱼条套餐</li>
+    <li>2.The Carrington Hotel Bistro｜本地pub简餐，walk‑in友好</li>
+    <li>3.Leura Garage｜意式风味，周末建议预约</li>
+  </ul>
+  </div>`
+},
+{
+  name:"D12 2.4 悉尼直飞深圳宝安机场｜回到坪山",
+  lat:-33.9461,lng:151.1808,
+  popupText:"D12｜悉尼机场直飞深圳宝安，旅程结束",
+  html:`
+  <div class="item"><span class="tag tag-dist">📐路标指引</span>悉尼岩石区公寓前往SYD机场；火车/打车前往航站楼；<b>不赶特别早航班。</b></div>
+  <div class="item">🧩安排：市区简短补充采购伴手礼，从容前往机场，直飞深圳宝安机场，返回坪山。</div>
+  <div class="item">悉尼机场Google地图：<a href="https://www.google.com/maps/search/?api=1&query=Sydney+Kingsford+Smith+Airport+SYD" target="_blank">导航</a></div>
+  <div class="item"><span class="tag-weather">☀️天气预案</span>雷雨航班延误预留备选方案。</div>
+  <div class="item">🏁旅程结束，不求全部打卡，全家开心最重要！</div>`
+}
+];
+
+days.forEach(d=>{
+  const marker = L.marker([d.lat, d.lng]).addTo(map).bindPopup(`<b>${d.name}</b><br/>${d.popupText}`);
+  allMarkers.push(marker);
+})
+
+const timeline = document.getElementById('timeline');
+const panelTitle = document.getElementById('panel-title');
+const panelContent = document.getElementById('panel-content');
+
+days.forEach((d,i)=>{
+  const chip = document.createElement('div');
+  chip.className = "day-chip";
+  chip.innerText = d.name;
+  chip.onclick = ()=>{
+    document.querySelectorAll('.day-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    map.setView([d.lat,d.lng],9);
+    panelTitle.innerText = d.name;
+    panelContent.innerHTML = d.html;
+  };
+  timeline.appendChild(chip);
+})
+
+if(allMarkers.length>0){
+  const fg = L.featureGroup(allMarkers);
+  map.fitBounds(fg.getBounds(),{padding:[40,40]});
+}
+</script>
+</body>
+</html>
