@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html data-page-node-id="KfyLxg5ttbkN2UNheuW3he" lang="zh-CN">
+<head data-page-node-id="pkIP3gRmiugqkg6esu9N2F">
+<meta data-page-node-id="MT390ydMcuekJKjj8GV5Ef" charset="UTF-8">
+<meta data-page-node-id="K84oIbP3bgESLyHrTT8ICX" content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<meta data-page-node-id="WdqAsty4DZ1UEkD4iP4s5U" content="#0e7490" name="theme-color">
+<title data-page-node-id="bltusgk1yioKNG35h378n3" data-pnid-children="EhH23OfwBfzFAEHMEkcyad">澳大利亚春节亲子之旅 · 2027</title>
+<style data-page-node-id="YlrcN8rZT0BTYTmCq2fO8y" data-pnid-children="VWNic0cxYgI6MFZrJyRkQc">
+:root{
+  --bg:#f4f7f8; --card:#ffffff; --ink:#1e293b; --sub:#64748b; --line:#e2e8f0;
+  --brand:#0e7490; --brand2:#155e75; --accent:#f59e0b; --ok:#16a34a; --warn:#d97706; --bad:#dc2626;
+  --chip1:#dcfce7; --chip1t:#166534; --chip2:#dbeafe; --chip2t:#1e40af; --chip3:#ffedd5; --chip3t:#9a3412;
+  --chip4:#f3e8ff; --chip4t:#6b21a8; --chip5:#f1f5f9; --chip5t:#475569; --chip6:#fef9c3; --chip6t:#854d0e;
+  --shadow:0 2px 10px rgba(15,23,42,.08);
+}
+html[data-theme=dark]{
+  --bg:#0b1220; --card:#111a2c; --ink:#e2e8f0; --sub:#94a3b8; --line:#1e293b;
+  --brand:#22d3ee; --brand2:#67e8f9; --accent:#fbbf24;
+  --chip1:#052e16; --chip1t:#86efac; --chip2:#172554; --chip2t:#93c5fd; --chip3:#431407; --chip3t:#fdba74;
+  --chip4:#2e1065; --chip4t:#d8b4fe; --chip5:#1e293b; --chip5t:#cbd5e1; --chip6:#422006; --chip6t:#fde047;
+  --shadow:0 2px 12px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px}
+.wrap{max-width:860px;margin:0 auto;padding:0 14px}
+/* ---------- top nav ---------- */
+header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,var(--brand2),var(--brand));color:#fff;box-shadow:var(--shadow)}
+html[data-theme=dark] header{background:linear-gradient(135deg,#0c4a6e,#164e63)}
+.htitle{display:flex;align-items:center;gap:8px;padding:10px 14px 4px;font-weight:700;font-size:16px}
+.htitle small{font-weight:400;opacity:.85}
+.themebtn{margin-left:auto;background:rgba(255,255,255,.18);border:none;color:#fff;border-radius:10px;padding:6px 10px;font-size:15px;cursor:pointer}
+nav.tabs{display:flex;overflow-x:auto;gap:6px;padding:6px 14px 10px;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{flex:0 0 auto;color:#fff;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);white-space:nowrap}
+nav.tabs a.on{background:#fff;color:var(--brand2);font-weight:700}
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;padding:34px 18px 26px;background:
+ linear-gradient(160deg,rgba(8,51,68,.86),rgba(19,78,94,.78)),
+ repeating-linear-gradient(115deg,transparent 0 26px,rgba(255,255,255,.05) 26px 28px),
+ linear-gradient(20deg,#0891b2,#0e7490 45%,#155e75)}
+.hero h1{font-size:22px;letter-spacing:1px}
+.hero p{opacity:.92;font-size:13px;margin-top:4px}
+.cd{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.cd div{background:rgba(255,255,255,.16);backdrop-filter:blur(4px);border-radius:12px;padding:8px 0;min-width:64px;text-align:center}
+.cd b{display:block;font-size:24px;font-variant-numeric:tabular-nums}
+.cd span{font-size:11px;opacity:.85}
+.next{margin-top:14px;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.4);border-radius:12px;padding:10px 12px;font-size:13px}
+.route-line{margin-top:14px;font-size:13px;opacity:.95;letter-spacing:.5px}
+/* ---------- sections ---------- */
+section{padding:26px 0 6px;scroll-margin-top:110px}
+h2{font-size:19px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+h2 .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);flex:0 0 auto}
+.lead{color:var(--sub);font-size:13px;margin-bottom:14px}
+.card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:14px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+/* chips */
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.s1{background:var(--chip1);color:var(--chip1t)} .s2{background:var(--chip2);color:var(--chip2t)}
+.s3{background:var(--chip3);color:var(--chip3t)} .s4{background:var(--chip4);color:var(--chip4t)}
+.s5{background:var(--chip5);color:var(--chip5t)} .s6{background:var(--chip6);color:var(--chip6t)}
+/* days */
+.day{margin-bottom:16px}
+.day h3{font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.day .dmeta{color:var(--sub);font-size:12px;margin:2px 0 8px}
+.item{display:flex;gap:10px;padding:9px 0;border-top:1px dashed var(--line);align-items:flex-start}
+.item:first-of-type{border-top:none}
+.ck{width:20px;height:20px;flex:0 0 auto;margin-top:2px;accent-color:var(--brand);cursor:pointer}
+.itime{font-variant-numeric:tabular-nums;font-weight:700;color:var(--brand);min-width:52px;font-size:13px;margin-top:2px}
+.ibody{flex:1;min-width:0}
+.iname{font-weight:600}
+.itrans{font-size:12px;color:var(--sub);margin-top:2px}
+.inote{font-size:12px;color:var(--warn);margin-top:2px}
+.done .iname{text-decoration:line-through;color:var(--sub)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:7px 12px;font-size:13px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.editbtn{font-size:11px;border:1px solid var(--line);background:transparent;color:var(--sub);border-radius:8px;padding:2px 8px;cursor:pointer;visibility:hidden}
+.editing .editbtn{visibility:visible}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{background:var(--brand);color:#fff;padding:7px 8px;text-align:left;font-weight:600}
+.tbl td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tblwrap{overflow-x:auto}
+/* nav cards */
+.navcard{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.navcard b{font-size:14px}
+.addr{font-size:12px;color:var(--sub);width:100%}
+.mini{display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;color:var(--brand2);border:1px solid var(--line);padding:4px 9px;border-radius:8px;background:var(--card)}
+/* checklist */
+.cl h4{font-size:14px;margin:4px 0 8px}
+.clrow{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-top:1px dashed var(--line)}
+.clrow:first-of-type{border-top:none}
+.progress{height:8px;border-radius:99px;background:var(--chip5);overflow:hidden;margin:6px 0 12px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),#10b981);width:0;transition:width .3s}
+.ptext{font-size:11px;color:var(--sub);margin-bottom:16px}
+/* misc */
+.tag{display:inline-block;font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px;margin:2px 4px 2px 0}
+footer{color:var(--sub);font-size:12px;text-align:center;padding:26px 14px 40px}
+input.search{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px;margin-bottom:12px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:99px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .3s;z-index:99}
+.toast.show{opacity:1}
+</style>
+</head>
+<body data-page-node-id="balbkTRbILjTSbeEJqW0lR">
+<header data-page-node-id="6b5tZpqeQFHasbph6cPx6i">
+  <div data-page-node-id="us8SnXKfO8M5XKm8D6aUgB" class="htitle"><!--pnid:UWHejHeY7Sg4OcQqOdOAsA-->🦘 澳大利亚春节亲子之旅 <small data-page-node-id="ZgTZ10sf9ldO4jlvrvnFPn" id="hd-date"><!--pnid:OulYucONvV9LreK37ab3ST-->2027.01.24 - 02.04</small>
+    <button data-page-node-id="HXBnIC6eZIsna9WrRIkSTz" class="themebtn" id="themeBtn" title="切换深浅色"><!--pnid:EKSvApD4FDQIEySMuT5eHd-->🌗</button>
+  </div>
+  <nav data-page-node-id="Iw9RxFC8c3Ra63zSm6PSjk" class="tabs" id="tabs">
+    <a data-page-node-id="IAzaJk8ZQUOF5Qntq8bfYN" href="#home"><!--pnid:6nn7GXSlvrJU1UsSqO97EE-->首页</a><a data-page-node-id="QVf65NozKD51gTXewR0u6q" href="#route"><!--pnid:onEguTNmU7fFw01KTx5Npb-->路线总览</a><a data-page-node-id="R5D0zEjFRYqsWq7uwA65gD" href="#days"><!--pnid:Je9VBNn6yFrFCMFkC8UxGr-->逐日行程</a><a data-page-node-id="96jYR4cBd65bJ85VsY78Kx" href="#trans"><!--pnid:3LixdQ7pacgUeZsnr8mEuX-->交通住宿</a>
+    <a data-page-node-id="XMzOMW8EJ7Xx7v6Txtj7Gb" href="#poi"><!--pnid:vmmw8OdfLjLSSiwwW7Tce9-->景点餐厅</a><a data-page-node-id="lvckiSgypV9XeQ6SEcYmgX" href="#nav"><!--pnid:Bpx9s0N7uv7dZtSzkc8fAY-->地点导航</a><a data-page-node-id="Z6sqQ9f1ZNYMkKRaWdqRV1" href="#list"><!--pnid:vu6K2O0gTwpyqyhJD4A2cJ-->公共清单</a><a data-page-node-id="lFYOg5Vzblazr61Rkjs9nd" href="#todo"><!--pnid:WmrXBSjPRoGuvxE3daK093-->待确认</a>
+  </nav>
+</header>
+
+<main data-page-node-id="prppX5e1pBGep40aq6BPb9" class="wrap">
+
+<!--pnid:pIrWgYdFGJJ8ljXeujEuL1--><!-- ============ HOME ============ -->
+<section data-page-node-id="JJLFb043NgGV1QgicBWDcF" id="home">
+  <div data-page-node-id="DyiBsrpY9xSEE2yhFFKu3j" class="hero">
+    <h1 data-page-node-id="kaV3zDYfVbTYfWzFdE8s1G"><!--pnid:dLl5R7f1ep7ckccmyHVe2m-->澳大利亚 · 春节亲子之旅</h1>
+    <p data-page-node-id="z5vSTnlRjHtW85duhUi28C"><!--pnid:vIP37MzSQ6fidN9uyMN0hf-->2027年1月24日 — 2月4日 · 12天 · 4大1小（共5人） · 悠闲慢节奏 · 布里斯班进 悉尼出</p>
+    <div data-page-node-id="hpams40sODnEBFV7KF796n" class="route-line"><!--pnid:sYltBYhPzteXYRCMRotWOL-->深圳坪山 ✈ 香港 ✈ 布里斯班 → 黄金海岸 → 凯恩斯 → 悉尼 ✈ 深圳（直飞）</div>
+    <div data-page-node-id="rsV2zzrb82ubhTVy7SAHNs" class="cd" id="countdown">
+      <div data-page-node-id="aHejPyPVRVpAl8yGrkVkCG"><b data-page-node-id="SYTNXwNgGY8knarLf6ozwO" id="cdD"><!--pnid:pe1LjAQSN3gV1PmoFDETos-->--</b><span data-page-node-id="ZqybyJnstx7gvHX1o44USm"><!--pnid:2izR0OwOsJL5D5qXqhSgi7-->天</span></div><div data-page-node-id="mix6jluBf6xOUv017ab8dk"><b data-page-node-id="RamH81xAuB2dXDVn8Hga2B" id="cdH"><!--pnid:FD9Py7U9J41T61LnXiSMym-->--</b><span data-page-node-id="ZpnLvmCW0FcnDDz2sQ7l8p"><!--pnid:E1rMSDlFi6tj9py0dGxo2C-->时</span></div>
+      <div data-page-node-id="HoAtGgGEdNSHzN0tIkOtpB"><b data-page-node-id="Lxjk5IEGC3EhvJHFbmcsc5" id="cdM"><!--pnid:wKEgjJLpaEJpPH2toqyliv-->--</b><span data-page-node-id="GGXmL8ElHln3Ek1L81YikQ"><!--pnid:2O7SwXPhmoCVJglE19PcVS-->分</span></div><div data-page-node-id="K0HfCaVWlL5IddLtBBl8G8"><b data-page-node-id="y7jIDAbixQULBGxuRfhQr9" id="cdS"><!--pnid:TpkLiIv2lU7WAz5golLR7v-->--</b><span data-page-node-id="8TNulqR56UGkKDFBGAaIMf"><!--pnid:gdE8oQCwTyKQlqnG9ZxOSa-->秒</span></div>
+    </div>
+    <div data-page-node-id="cpqvd9vMy6GGLpPmXzAwaC" class="next" id="nextSeg"><!--pnid:hjAJaDgjKaPsotcCFEBLnh-->计算下一站中…</div>
+  </div>
+  <div data-page-node-id="SW7NvFSIzagEd90bz2ty2K" class="card" style="margin-top:14px">
+    <b data-page-node-id="oUGMCwVO99xnmu4TAch5W2"><!--pnid:aHsPNbcPG6ytcQu05n20IA-->五大独特体验</b><!--pnid:ghZY2Nz3xyw401hY3KXShm-->（国内无法替代）：
+    <span data-page-node-id="z8eJC3FG8brzzzFqf7R2Ch" class="tag"><!--pnid:6CGYIasNZmviX7ov7zlA0o-->🪲 蓝光萤火虫（全球仅澳新）</span><span data-page-node-id="OUfw201MWjYiPFWBn3g7UD" class="tag"><!--pnid:HVsWNIEoHqVROs1reMR1lF-->🐬 野生海豚岸边喂食</span>
+    <span data-page-node-id="gJ2FpwmqYFOVVl0LPDhZ5h" class="tag"><!--pnid:QNZiYgtQByZUPS6rX5ki73-->🐨 抱考拉（仅昆州合法）</span><span data-page-node-id="8ykk7tSA0nlPtpf5IeIvm1" class="tag"><!--pnid:GlIfFwCF6okCEGZwu8P2LG-->🚁 大堡礁空中观光</span>
+    <span data-page-node-id="leAarpULa4NNt3FAjVRaLB" class="tag"><!--pnid:HwGTYwRpBYsCK7iLSLQdjz-->🎭 歌剧院内看《魔笛》</span><span data-page-node-id="qqadA6l7fuUBKdh6Y36Jat" class="tag"><!--pnid:SdS8cq43rvZtAsDKNWafLZ-->🏜️ 海岛滑沙</span>
+    <p data-page-node-id="exGBSPnzJuALkb10TWMnlO" style="color:var(--sub); font-size:12px; margin-top:8px"><!--pnid:h5fuLlr1qDaj0TphMRSnTb-->基调：每天最多1个主项目，留白充足；全程不游泳不潜水；城际全飞机，儿童晕车友好。</p>
+  </div>
+</section>
+
+<!--pnid:MaHwFnotfwUke2vmj5EJkM--><!-- ============ ROUTE ============ -->
+<section data-page-node-id="JDLURsnWno2wjd1UajnYqR" id="route">
+  <h2 data-page-node-id="nmQrbqUpwYjlbES3tD4N99"><span data-page-node-id="u6UxTS9j5P4McfEhao2kCp" class="dot"></span><!--pnid:8qlFt8MK7Qj4hzJaR0nkyo-->路线总览</h2>
+  <p data-page-node-id="qvYuTnf9wNDXl2IhmFWilZ" class="lead"><!--pnid:M8klyW0c0FQTpSbGzseVPU-->手机横看顺序，电脑看全景 · 布里斯班进、悉尼出，不走回头路</p>
+  <div data-page-node-id="EXHOv0R9l1SCEiKJeslPUH" class="card" id="routeFlow"></div>
+  <div data-page-node-id="MLsZ4ThxuZQXqCSwAOXE1Q" class="card">
+    <b data-page-node-id="bb6OfWTE5rinXQh67lwcGQ"><!--pnid:TqSqfmPduYtI6tbnecumMg-->住宿概览</b><!--pnid:6V9JaGrGIUKpEXfzgDoAsm-->（公寓式酒店 · 两房公寓 · 洗烘/洗碗机/阳台/厨具 · 状态：<span data-page-node-id="8dyW0gMZ9AArU8Ug1W1BIc" class="chip s6"><!--pnid:U36l6zpSNusOFvbnhpajOv-->暂定</span><!--pnid:8bNjhVTZfGxvoEYfDRTyZo-->）
+    <div data-page-node-id="2Qhqqu3jhYydd2enhbpdep" id="routeHotels" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!--pnid:ReyhrR9k8oP853yecNQtET--><!-- ============ DAYS ============ -->
+<section data-page-node-id="cU5uGTw8CdaohjYtF4gQ28" id="days">
+  <h2 data-page-node-id="X6u9b3IExzkfeOupSjPBEs"><span data-page-node-id="npx9ClXHMpNpvkKdSi2EUZ" class="dot"></span><!--pnid:A5rmuHox1kFEibv5d0SysP-->逐日行程</h2>
+  <p data-page-node-id="8UQ4Q62a0HBgmIRSKTO98l" class="lead"><!--pnid:xMKfcWoKItTWv9yDqkZZZq-->勾选=已完成，保存在本机 · 点「编辑」可直接修改文字（本机保存，可导出备份）</p>
+  <div data-page-node-id="nItC4JDbmNBQgNPCVe0HGn" class="toolbar">
+    <button data-page-node-id="84mOMka0gYP3hIwxjyiUyb" class="btn" id="editToggle"><!--pnid:HjIYQpBOqiRBIg1jOYM3Ay-->✏️ 编辑模式：关</button>
+    <button data-page-node-id="vklMH6NgdxvXJUOS6JMQ7T" class="btn" id="exportBtn"><!--pnid:PJroCfvwdTPa4LqQMa8Vls-->⬇️ 导出我的修改</button>
+    <button data-page-node-id="OlXMuPjx4G5hrOTpMGIb1b" class="btn" id="importBtn"><!--pnid:O7irOc5OXH0lP9lz7ITZSm-->⬆️ 导入数据</button>
+    <input data-page-node-id="pKNiMDddOLWhVuQVxImlvi" accept=".json" hidden id="importFile" type="file">
+  </div>
+  <div data-page-node-id="r5dHkiAdKK6uhkBEU9br42" id="daysList"></div>
+</section>
+
+<!--pnid:jKXm0IPF3FIAKC7ktZrLZW--><!-- ============ TRANS & HOTELS ============ -->
+<section data-page-node-id="HZT3tJVjXpvjy0lBN1DiY4" id="trans">
+  <h2 data-page-node-id="CJ1DBUTfsbadn3sdaAKFTX"><span data-page-node-id="3kjCuKUXBJjCPlVotNO081" class="dot"></span><!--pnid:V1CycwNNDsS9s9FxmKS4P5-->交通住宿</h2>
+  <p data-page-node-id="3iUrABSnF1KQbARCmkHBP6" class="lead"><!--pnid:hKEDMnXgdUddntUazh7QjF-->国际段班次已核实 · 国内段与公寓为暂定，预订后更新 · 价格为2026-11-19查询参考</p>
+  <div data-page-node-id="9we0onZSWgUtj189CE3iRt" class="card"><b data-page-node-id="9uhPaeV0jM4LUyyjIpQuNf"><!--pnid:YkTnOZJxQIqcitaR47Dzdx-->✈️ 国际航班</b>
+    <div data-page-node-id="yyN654ufBd6hh9nNYVCcyX" class="tblwrap"><table data-page-node-id="ZVJqusWDcbgfTV71rjO5ug" class="tbl" id="tblIntl"></table></div>
+  </div>
+  <div data-page-node-id="gNx2vLOWpkcvFSLrtSvN3C" class="card"><b data-page-node-id="f6hjt3be6CNlxriXtWdPJk"><!--pnid:vuQMxGDVpYs5JjDI3DmUjN-->✈️ 澳洲国内段 + 市内交通</b>
+    <div data-page-node-id="x7BMGopC9aUvZHZ5iz9P2G" class="tblwrap"><table data-page-node-id="LQIwQuCEns3Dqs1fyaaaHo" class="tbl" id="tblLocal"></table></div>
+  </div>
+  <div data-page-node-id="nRfOWx2J8NCkRrtQPwQQmB" class="card"><b data-page-node-id="WvIHD9LURJWBDrpGslyb05"><!--pnid:Jgadj7F8Z73F3VdDvETneA-->🏨 公寓式酒店</b>
+    <div data-page-node-id="112eGO5Km5IKpoSKKJrnrx" class="tblwrap"><table data-page-node-id="TxF31M6ABRLryuf8qqGLLM" class="tbl" id="tblHotel"></table></div>
+    <p data-page-node-id="WR7uUGOl7sCNbFkkbyncYG" style="font-size:12px; color:var(--sub); margin-top:8px"><!--pnid:7aetidhVamV3WyOtysafhO-->预订核对清单：两房公寓（2卧室+沙发床）｜洗衣机+烘干机｜洗碗机｜阳台｜全套厨具餐具｜吹风机｜步行5-10分钟内有超市/车站。缺一换备选。</p>
+  </div>
+</section>
+
+<!--pnid:3YNb830elFw7MlMgjDzih1--><!-- ============ POI & RESTAURANTS ============ -->
+<section data-page-node-id="px2qMqutp4XY7yBEguccy1" id="poi">
+  <h2 data-page-node-id="t8IvVJVJiQed4jUnshvqfC"><span data-page-node-id="X9Q600RzKVQWmc5PWSkESc" class="dot"></span><!--pnid:9AuYl62uSecLug5V1WyZo3-->景点餐厅</h2>
+  <p data-page-node-id="my4m4PjGiPsln3sb2mfC08" class="lead"><!--pnid:ONeWjI93EDTY10D5CMT481-->候选景点与可选餐厅<b data-page-node-id="Qdgc3MdlfSFXp6NKO22Ftc"><!--pnid:VIxR3itUpNPGty2VZ0EFmx-->独立展示</b><!--pnid:qDvQGddLkfwD5e0mKWp8T6-->，不自动加入正式行程 · 点名称可跳到「地点导航」</p>
+  <div data-page-node-id="ynNQc0okgTyscl63oa3XuV" class="card">
+    <b data-page-node-id="GzDyjtgdQ7uW12OUzm5d7v"><!--pnid:Yrs4NSzfMA5QyT8ZuoXiTx-->候选景点</b><!--pnid:9GJryrreQS8exeR6Qac9X6-->（为什么降级/何时可加）
+    <div data-page-node-id="O1vESPq5FcdkwVD9cKZvyq" id="poiList" style="margin-top:8px"></div>
+  </div>
+  <div data-page-node-id="4CXGak4zmCbBzGbi11lArp" class="card">
+    <b data-page-node-id="NgxeGF1wZrTUlmUf5t5a5J"><!--pnid:bIFGxViNcEUSEzFtPcWP4x-->可选餐厅</b><!--pnid:wuF15x2uGtvAw4BaEWVDdo-->（大众点评/Google Maps 双平台，评分与价格为2026-11-19查询）
+    <div data-page-node-id="XZbhGorvQIPW9OmZUrCl9E" id="restList" style="margin-top:8px"></div>
+  </div>
+  <div data-page-node-id="XOygR1DSDNT4KbSmBSYLIe" class="card">
+    <b data-page-node-id="RsyxUfcVMVkwEHp2aKVkej"><!--pnid:iWSSD75KP6F5favjUppbst-->🛍️ 手信购物</b><!--pnid:KPQzAEGy0UkEsl4DxJzc8o-->（比国内便宜的值得买清单）
+    <div data-page-node-id="5tulYRb4UywHGZRCWXGBX7" id="shopList" style="margin-top:8px"></div>
+    <p data-page-node-id="VSFntqDQvKj1z15l7ACI2j" style="font-size:12px; color:var(--warn); margin-top:8px"><!--pnid:rrmLUHUNOYwGJhrW6HpqNf-->退税：单店满AUD 300保留小票，离境机场办理（约返10%）；液体&gt;100ml需托运。</p>
+  </div>
+</section>
+
+<!--pnid:WhRUMsoSj7ZUxuXpSV6O7o--><!-- ============ NAV ============ -->
+<section data-page-node-id="NnPn4n67DBAGpXdauNrX2F" id="nav">
+  <h2 data-page-node-id="5Kyfquw96atvXzF9zHxipH"><span data-page-node-id="g2BYF80UTWohaTIVhBaM1A" class="dot"></span><!--pnid:OvoTxOBwSFpsGeIh5bmUy7-->地点导航</h2>
+  <p data-page-node-id="p3sGR0u5RcrJreLoGyrqPH" class="lead"><!--pnid:Esl7wcaw9oDoU5Dsb7XcsO-->搜索地点 → 查看/复制地址 → 跳转 Google Maps 或 Apple Maps</p>
+  <input data-page-node-id="yReC3AzF1QOhsTjJGCk6Q0" class="search" id="navSearch" placeholder="🔍 输入地点关键词，如：歌剧院、海豚、考拉、机场">
+  <div data-page-node-id="YBTrTS7hf7qtDtWfTr6sEi" id="navList"></div>
+</section>
+
+<!--pnid:WC8r5AyxRA4J53Qh6IBsN7--><!-- ============ CHECKLIST ============ -->
+<section data-page-node-id="hryfzUJulyCZ42ibtiWLwP" id="list">
+  <h2 data-page-node-id="7QCg35ZJslw59ZFjangCme"><span data-page-node-id="KPXt2OlXRvgJFuNoj23poK" class="dot"></span><!--pnid:4YiceMYIDxhudr6NWpi7Fa-->公共清单</h2>
+  <p data-page-node-id="VzYe64tlKeLaJtsEmsgeEq" class="lead"><!--pnid:nOxvmEv5vdCpNchPjXm8Mu-->勾选状态保存在本机，刷新不丢 · 顶部进度条实时统计</p>
+  <div data-page-node-id="7SJnQPQWjJFzueRn8Y3UWz" id="checklist"></div>
+</section>
+
+<!--pnid:TQtAGGzICuMGIYCR7yx83V--><!-- ============ PENDING ============ -->
+<section data-page-node-id="jvYVvUgCFfRhUWpM7XevvB" id="todo">
+  <h2 data-page-node-id="9G62fZQbrr5Yysgf7hNT9d"><span data-page-node-id="t6f3DrwCyLyTdzYx4ELG6r" class="dot"></span><!--pnid:ZORYieFg7HW2DQbNOvp9mv-->待确认事项</h2>
+  <p data-page-node-id="IUlpefLr9g8SoAvH0Fzd1U" class="lead"><!--pnid:Bqa0AexLO6To56IKPUE5AC-->只保留真正未解决的问题 · 全部解决后此板块可删除</p>
+  <div data-page-node-id="LCnNAOmZvk2CZntkdQiahR" class="card" id="pendingList"></div>
+</section>
+
+</main>
+<footer data-page-node-id="ono42yGtVsxwGx1bXkXrbz"><!--pnid:3fXhcvoXixHY3NFJ0k7jRT-->澳大利亚春节亲子之旅 · 行程手册 · 数据版本 V8.1（2026-11-19）<br data-page-node-id="2YyvmFhaxrn5Vp5yPlDWXB"><!--pnid:Gji0E9UJk8x4qadR7i3MWK-->本页状态保存在当前设备 · 未公开任何证件号/订单号/房间号</footer>
+<div data-page-node-id="woWduGnZx3zFxSB9w3zVyZ" class="toast" id="toast"></div>
+
+<script data-page-node-id="cYRXvNBelJBVYRXkTgEHii" data-pnid-children="qvxdBfRqh70fgXSYtP2ikq">
+/* ================= DATA ================= */
+const DATA = {
+  meta:{start:"2027-01-24T23:55:00+08:00", dateLabel:"2027.01.24 - 02.04", people:"4大1小（共5人）"},
+  days:[
+   {id:"d1",date:"1/24 周日",title:"D1 深圳 → 香港 → 布里斯班（夜航）",
+    items:[
+     {t:"15:00",n:"坪山出发",tr:"自驾/网约车 · 30-40分钟",s:"现场选择",note:""},
+     {t:"16:00",n:"深圳湾口岸过关 → 香港机场",tr:"跨境巴士 · 约60-75分钟（含过关）",s:"现场选择",note:"永东/中港通等"},
+     {t:"17:30",n:"香港机场T1 值机",tr:"国泰建议提前2.5小时",s:"已确认",note:"三脚插头电器可直用；液体>100ml托运"},
+     {t:"23:55",n:"CX153 起飞 ✈ 布里斯班",tr:"空客350 · 飞行8小时50分",s:"已确认",note:"夜航机上过夜；备选CX157 12:35→23:20"}]},
+   {id:"d2",date:"1/25 周一",title:"D2 抵达布里斯班 · 留白日（时差+2小时）",
+    items:[
+     {t:"10:45",n:"落地布里斯班，入境+提行李",tr:"约60-90分钟",s:"已确认",note:"入境卡如实填写；药品原包装申报"},
+     {t:"12:30",n:"机场 → 市中心公寓（暂定 Meriton Herschel St）",tr:"Airtrain火车约20分钟 / 网约车20-25分钟（AUD 40-50/车，暂定）",s:"暂定",note:""},
+     {t:"13:00",n:"公寓休整倒时差 + 楼下超市采购",tr:"步行5分钟内",s:"现场选择",note:"Woolworths/Coles"},
+     {t:"17:30",n:"南岸公园河滨平地散步（可选）",tr:"步行 / 免费CityHopper渡轮",s:"可选",note:""}]},
+   {id:"d3",date:"1/26 周二",title:"D3 摩顿岛天阁露玛 · 岸边喂野生海豚",
+    items:[
+     {t:"07:30",n:"市中心 → Holt Street 码头",tr:"网约车约15分钟（AUD 25-30，暂定）",s:"暂定",note:"⚠️今日澳大利亚国庆日，游客多；渡轮10:00固定班次，本日为全程唯一需早出门的一天"},
+     {t:"08:00",n:"码头报到",tr:"提前1小时",s:"已确认",note:"渡轮班次已核实"},
+     {t:"10:00",n:"渡轮出发 🚢",tr:"航程75分钟，途经摩顿湾海洋公园",s:"已确认",note:""},
+     {t:"11:15",n:"登岛自由活动：滑沙（暂定加购）/海滩躺椅/午餐",tr:"度假村内",s:"可选",note:"午餐含餐券（成人$20/儿童$15额度）"},
+     {t:"17:30",n:"栈桥集合，海豚讲解",tr:"步行至栈桥",s:"已确认",note:""},
+     {t:"18:15",n:"岸边浅水喂野生海豚 🐬",tr:"约1小时",s:"已确认",note:"站水中约膝深，无需游深水；出现率98%"},
+     {t:"19:00",n:"渡轮返回（喂食结束发船）",tr:"75分钟",s:"已确认",note:""},
+     {t:"20:15",n:"抵布里斯班回公寓",tr:"网约车15分钟",s:"暂定",note:""}]},
+   {id:"d4",date:"1/27 周三",title:"D4 龙柏考拉保护区（抱考拉 🐨）",
+    items:[
+     {t:"10:30",n:"市中心 → 龙柏考拉保护区",tr:"河上游船直达约75分钟（暂定AUD 35/人）/ 网约车约25分钟（AUD 30-40）",s:"暂定",note:"地址：708 Jesmond Rd, Fig Tree Pocket；10:30出门，约11:00-11:45到园"},
+     {t:"11:00",n:"入园（9:00-17:00）",tr:"园内平地缓坡",s:"已确认",note:"9:45彩虹鹦鹉早场已错过；牧羊犬秀⭐看当日场次安排"},
+     {t:"11:30",n:"Koala Moment 抱考拉（AUD 35/次，含摸抱+自拍）",tr:"园内",s:"已确认",note:"上午赶不上可约14:00-15:45第二场"},
+     {t:"12:30",n:"园内午餐：Fat Possum Café / Sleepy Koala Café",tr:"园内步行",s:"可选",note:"价格不便宜，可自带简食"},
+     {t:"14:30",n:"返回市中心",tr:"河游船/网约车 25-75分钟",s:"暂定",note:""},
+     {t:"15:30",n:"留白：南岸公园浅逛/公寓休息",tr:"平路步行",s:"可选",note:""}]},
+   {id:"d5",date:"1/28 周四",title:"D5 布里斯班 → 黄金海岸（转场日）",
+    items:[
+     {t:"10:30",n:"退房 → 黄金海岸冲浪者天堂",tr:"包车约1小时（AUD 120-160/车，暂定）；备选火车NGR约1h+电车20分",s:"暂定",note:"晕车儿童提前服药、靠前座"},
+     {t:"11:45",n:"入住公寓（暂定 Chevron Renaissance，楼下Coles超市）",tr:"步行",s:"暂定",note:""},
+     {t:"13:00",n:"午餐：姑苏缘面饭馆（DP 4.90 中餐榜1）",tr:"步行5-10分钟",s:"可选",note:""},
+     {t:"14:30",n:"留白：海滩看海 + 超市采购",tr:"公寓步行3-5分钟",s:"现场选择",note:""},
+     {t:"18:30",n:"晚餐：Hurricane's Grill（DP 4.89 榜1，牛肋排）",tr:"步行5-10分钟",s:"可选",note:"建议提前订位"}]},
+   {id:"d6",date:"1/29 周五",title:"D6 海洋世界 或 全天留白（二选一）",
+    items:[
+     {t:"10:30",n:"公寓 → 海洋世界（方案A）",tr:"网约车约15分钟（AUD 20-25，暂定）",s:"可选",note:"园内有轨道车代步，步行可控；海豚秀⭐"},
+     {t:"11:00",n:"园内游玩：海豚秀/企鹅馆/缆车",tr:"约4-5小时",s:"可选",note:""},
+     {t:"16:00",n:"返回公寓",tr:"网约车15分钟",s:"可选",note:""},
+     {t:"18:00",n:"晚餐公寓自炊（楼下超市）",tr:"—",s:"现场选择",note:"方案B=全天留白：海滩+Q1观景台（电梯直达）"}]},
+   {id:"d7",date:"1/30 周六",title:"D7 白天留白 + 晚上春溪蓝光萤火虫 ✨",
+    items:[
+     {t:"10:30",n:"完全留白：睡到自然醒/海滩/公寓",tr:"—",s:"现场选择",note:"可选Q1 SkyPoint观景台（电梯直达，暂定AUD 30/人）"},
+     {t:"16:30",n:"提前晚餐（自炊或简餐）",tr:"—",s:"现场选择",note:""},
+     {t:"17:30",n:"萤火虫夜游中文团 酒店接人",tr:"中巴赴春溪国家公园约60分钟（唯一夜间车程）",s:"已确认",note:"⚠️孩子提前服晕车药"},
+     {t:"19:00",n:"自然桥洞穴 · 蓝光萤火虫 🪲",tr:"平缓环形步道约1.5小时",s:"已确认",note:"禁闪光灯和强光手机；冈瓦纳雨林世界遗产"},
+     {t:"20:30",n:"返程（回程路上观星）",tr:"车程约45分钟",s:"已确认",note:""},
+     {t:"21:15",n:"回到黄金海岸市区",tr:"—",s:"已确认",note:""}]},
+   {id:"d8",date:"1/31 周日",title:"D8 黄金海岸 → 凯恩斯（转场日）",
+    items:[
+     {t:"10:30",n:"退房 → 黄金海岸机场（OOL）",tr:"网约车35-40分钟（AUD 50-60，暂定）",s:"暂定",note:""},
+     {t:"12:30",n:"起飞 → 凯恩斯（暂定捷星/维珍，选午后航班）",tr:"飞行约2小时",s:"暂定",note:""},
+     {t:"15:00",n:"落地 → 市区公寓（暂定 Mantra Trilogy）",tr:"网约车10-15分钟（约6km，AUD 20-25）",s:"暂定",note:""},
+     {t:"16:00",n:"留白：Esplanade潟湖边休息",tr:"步行3分钟",s:"现场选择",note:""},
+     {t:"18:30",n:"晚餐：Prawn Star 码头渔船海鲜（拼盘AUD 75-100）",tr:"步行10-15分钟",s:"可选",note:"到早占位，生意火爆"}]},
+   {id:"d9",date:"2/1 周一",title:"D9 大堡礁观光直升机 🚁 + 留白",
+    items:[
+     {t:"10:30",n:"公寓 → 凯恩斯码头直升机场（Pier Point Rd）",tr:"步行10-15分钟",s:"暂定",note:""},
+     {t:"11:15",n:"报到+安全讲解",tr:"提前45分钟",s:"暂定",note:"⚠️需申报体重；起飞前1小时服晕机药、勿饱食"},
+     {t:"12:00",n:"大堡礁空中观光 30-40分钟（纯空中，不降落不浮潜）",tr:"直升机共享飞行",s:"暂定",note:"预订时选午前时段（光线好气流稳）；3岁以上儿童按成人价占座"},
+     {t:"13:00",n:"回公寓休整",tr:"步行",s:"暂定",note:""},
+     {t:"13:30",n:"午餐+下午完全留白",tr:"—",s:"现场选择",note:"可选库兰达雨林火车+Skyrail（全天制，如加则需改为本日主项目）"},
+     {t:"18:30",n:"晚餐：Dundee's 邓迪鳄鱼餐厅（鳄鱼/袋鼠拼盘）",tr:"步行约10分钟",s:"可选",note:"dundees.com.au"}]},
+   {id:"d10",date:"2/2 周二",title:"D10 凯恩斯 → 悉尼 + 晚看《魔笛》🎭",
+    items:[
+     {t:"10:30",n:"退房 → 凯恩斯机场",tr:"网约车10-15分钟",s:"暂定",note:""},
+     {t:"12:30",n:"起飞 → 悉尼（暂定澳航/维珍，选午后航班）",tr:"飞行约3小时（时差+1）",s:"暂定",note:""},
+     {t:"16:30",n:"悉尼机场 → CBD公寓（暂定 Meriton World Tower）",tr:"机场线火车约13分钟（AUD 17-20/人）；网约车约25分钟（AUD 45-55）",s:"暂定",note:""},
+     {t:"17:00",n:"入住+简餐",tr:"—",s:"现场选择",note:""},
+     {t:"19:30",n:"《魔笛》莫扎特歌剧（德语演唱+简体中文字幕）",tr:"步行约15分钟到歌剧院",s:"暂定",note:"约2小时50分含中场；场次待查sydneyoperahouse.com；孩子坐不住→改D11晚或取消晚场"},
+     {t:"22:30",n:"返回公寓",tr:"步行",s:"—",note:""}]},
+   {id:"d11",date:"2/3 周三",title:"D11 歌剧院导览 + 采购留白（早休息）",
+    items:[
+     {t:"10:30",n:"出门 → 悉尼歌剧院内部导览（约1小时，暂定11:00场次）",tr:"步行约15分钟",s:"暂定",note:""},
+     {t:"12:00",n:"环形码头+岩石区平地漫步（可选，随时可回）",tr:"步行",s:"可选",note:"麦考利夫人椅子机位在旁"},
+     {t:"13:00",n:"午餐：木棉 MuMian 达令港（OpenTable食客之选2025）",tr:"步行/轻轨约15分钟",s:"可选",note:"mumian.au 订位"},
+     {t:"15:00",n:"留白：唐人街采购手信（保健品/UGG/Tim Tam）",tr:"步行+轻轨",s:"现场选择",note:"单店满AUD 300留小票退税"},
+     {t:"18:00",n:"晚餐+回公寓收拾行李",tr:"—",s:"现场选择",note:""},
+     {t:"20:00",n:"早休息（次日早班机）",tr:"—",s:"—",note:""}]},
+   {id:"d12",date:"2/4 周四",title:"D12 返程：悉尼 ✈ 深圳（直飞）",
+    items:[
+     {t:"05:30",n:"起床退房",tr:"—",s:"已确认",note:""},
+     {t:"05:50",n:"公寓 → 悉尼机场T1",tr:"机场线首班约05:00起，约13分钟；网约车约25分钟（AUD 45-55，暂定）",s:"暂定",note:""},
+     {t:"06:20",n:"T1值机（提前2.5-3小时）",tr:"—",s:"已确认",note:"退税物品随身备查"},
+     {t:"09:10",n:"CZ3072 起飞 ✈ 深圳",tr:"空客330 · 飞行9小时10分",s:"已确认",note:"班期周一/四/六已核实"},
+     {t:"15:20",n:"落地深圳宝安T3",tr:"入境约40-60分钟",s:"已确认",note:""},
+     {t:"17:00",n:"返回坪山",tr:"网约车60-70分钟",s:"现场选择",note:"行程圆满结束 🎉"}]}
+  ],
+  intl:[
+   ["香港→布里斯班","国泰 CX153","23:55→次日10:45","8小时50分","空客350","已确认（未出票）","每日班；备选CX157 12:35→23:20"],
+   ["悉尼→深圳","南航 CZ3072","09:10→15:20","9小时10分","空客330","已确认（未出票）","班期周一/四/六；2/4周四 ✓"]],
+  local:[
+   ["布里斯班机场→市中心","Airtrain火车/网约车","20-25分钟","AUD 15-20/人或40-50/车","暂定"],
+   ["市中心⇄Holt St码头","网约车","15分钟","AUD 25-30","暂定"],
+   ["布里斯班⇄摩顿岛","渡轮（一日游含）","单程75分钟","含团费+燃油附加AUD 10/人往返","已确认"],
+   ["市中心⇄龙柏考拉","河游船/网约车","25-75分钟","AUD 30-40（车）","暂定"],
+   ["布里斯班→黄金海岸","包车/火车","约1小时-1小时20分","AUD 120-160/车","暂定"],
+   ["冲浪者天堂⇄海洋世界","网约车","15分钟","AUD 20-25","暂定"],
+   ["冲浪者天堂⇄春溪","夜游团中巴（含接送）","单程约60分钟","已含团费","已确认"],
+   ["黄金海岸市区⇄OOL机场","网约车","35-40分钟","AUD 50-60","暂定"],
+   ["黄金海岸→凯恩斯","捷星/维珍","约2小时","AUD 90-200/人","暂定"],
+   ["凯恩斯机场⇄市区","网约车","10-15分钟","AUD 20-25","暂定"],
+   ["凯恩斯→悉尼","澳航/维珍","约3小时","AUD 100-220/人","暂定"],
+   ["悉尼机场⇄CBD","机场线火车/网约车","13/25分钟","AUD 17-20/人或45-55/车","暂定"]],
+  hotels:[
+   ["布里斯班","1/25-28 · 3晚","Meriton Suites Herschel Street","Oaks Brisbane on Felix","河滨CBD，近南岸/渡轮"],
+   ["黄金海岸","1/28-30 · 2晚","Chevron Renaissance Apartments","Artique Resort","冲浪者天堂中心，楼下Coles"],
+   ["凯恩斯","1/30-2/1 · 2晚","Mantra Trilogy","Cairns City Apartments","Esplanade海滨旁"],
+   ["悉尼","2/1-4 · 3晚","Meriton Suites World Tower","Meriton Suites Kent Street","CBD核心，近地铁超市"]],
+  pois:[
+   ["蓝山+Scenic World","火车可达，观景步道步行多","如想加：D11替换或D9下午","中央车站→Katoomba约2h","蓝山 Scenic World Katoomba"],
+   ["塔龙加动物园","渡轮+缆车，山坡步行多（考拉已在龙柏满足）","替换D11上午","环形码头渡轮12分钟","Taronga Zoo Sydney"],
+   ["可伦宾动物园","与龙柏重复；树顶步道步行多","替换D6","冲浪者天堂网约车25分钟","Currumbin Wildlife Sanctuary"],
+   ["华纳电影世界","排队+步行多，孩子体力好可替换海洋世界","替换D6","网约车约20分钟","Warner Bros Movie World Gold Coast"],
+   ["邦迪海滩Icebergs","标志机位；公交往返+坡路","加在D11下午","公交约40分钟","Bondi Beach Icebergs Pool"],
+   ["Q1 SkyPoint观景台","电梯直达，步行极少（轻松）","D7白天随时可加","公寓步行即达","Q1 SkyPoint Observation Deck"],
+   ["库兰达雨林火车+Skyrail","凯恩斯经典；全天项目","D9下午替换留白","全天制含接送","Kuranda Scenic Railway"]],
+  rests:[
+   ["木棉 MuMian","悉尼·达令港","现代粤菜，OpenTable食客之选2025","约¥300-400/人","mumian.au 在线订位","MuMian Dining Darling Quarter Sydney"],
+   ["Hurricane's Grill","黄金海岸·冲浪者天堂","DP 4.89 澳菜榜1 · 烤牛肋排","约¥356/人","建议提前订位","Hurricane's Grill Surfers Paradise"],
+   ["姑苏缘面饭馆","黄金海岸·冲浪者天堂","DP 4.90 中餐榜1 · 平价","约¥74/人","无需订位","姑苏缘面饭馆 Surfers Paradise"],
+   ["Melbas 妙吧海鲜酒家","黄金海岸","DP 4.92 · 海鲜","约¥753/人","建议订位","Melbas On The Park Surfers Paradise"],
+   ["Prawn Star","凯恩斯·码头","DP高评 · 渔船上海鲜拼盘","AUD 50-100/人","到早占位","Prawn Star Marlin Marina Cairns"],
+   ["Dundee's 邓迪鳄鱼餐厅","凯恩斯·码头","鳄鱼/袋鼠/鸸鹋拼盘","AUD 60-90/人","dundees.com.au","Dundee's Waterfront Restaurant Cairns"],
+   ["Ochre Restaurant","凯恩斯","Trip 4.6 · 澳式丛林菜","AUD 60-100/人","电话预订","Ochre Restaurant Cairns"],
+   ["Muddy's Cafe","凯恩斯·Esplanade","海滨早餐，人均AUD 20","AUD 20/人","无需订位","Muddy's Cafe Cairns Esplanade"],
+   ["皇庭雅聚","悉尼·唐人街","DP高分 · 粤菜包房","约¥497/人","需提前订包房","皇庭雅聚 Sydney Chinatown"],
+   ["福升海鲜酒家","悉尼·Beverly Hills（离市区20km）","DP 4.8 中餐好评榜1","约¥531/人","备选，需打车","福升海鲜酒家 Beverly Hills Sydney"]],
+  shops:[
+   ["保健品","Swisse护肝片/葡萄籽、Blackmores鱼油护眼片","比国内便宜30-50%，药房常半价","Chemist Warehouse / Priceline","https://www.chemistwarehouse.com.au"],
+   ["护肤","Aesop伊索、Jurlique茱莉蔻、Lucas Papaw木瓜膏、Goat Soap羊奶皂","本土品牌便宜20-50%，可退税","Aesop官网 / David Jones","https://www.aesop.com/au/"],
+   ["羊毛UGG","澳洲产UGG雪靴（认绿三角袋鼠标）、羊毛被","约国内一半价（AUD 80-150）","UGG Australia / 悉尼QVB","https://www.qvb.com.au"],
+   ["零食","Tim Tam、Red Rock Deli薯片、Koko Black巧克力","Coles约AUD 3.5/包，代购价数倍","Coles / Woolworths","https://www.coles.com.au"],
+   ["健康食品","麦卢卡蜂蜜UMF10+、Bio Island儿童DHA乳钙","药房热销，适合孩子","Chemist Warehouse","https://www.chemistwarehouse.com.au"],
+   ["红酒","奔富Bin 389、Jacob's Creek","本地价优，机场双支礼盒","Dan Murphy's / 机场免税","https://www.danmurphys.com.au"],
+   ["纪念品","袋鼠考拉玩偶、土著点画明信片（AUD 15-25）、悉尼地标拼图","独特澳洲文化符号","The Rocks手工店 / Paddy's Markets（现金）","https://www.paddysmarkets.com.au"],
+   ["服饰","Lululemon","叠加退税约国内6折","lululemon.com.au","https://www.lululemon.com.au"]],
+  nav:[
+   ["香港国际机场 T1","CX153出发 · 值机提前2.5小时","香港国际机场一号客运大楼"],
+   ["深圳湾口岸","跨境巴士上车点","深圳湾口岸"],
+   ["布里斯班机场 BNE","1/25 10:45 落地","Brisbane Airport"],
+   ["Meriton Suites Herschel St（布里斯班公寓·暂定）","D2-D4 住宿","Meriton Suites Herschel Street Brisbane"],
+   ["南岸公园","D2傍晚/D4下午 留白散步","South Bank Parklands Brisbane"],
+   ["Holt Street 码头","D3 08:00 海豚岛渡轮报到","Holt Street Wharf Pinkenba Brisbane"],
+   ["天阁露玛度假村（摩顿岛）","D3 海豚喂食 · 10:00渡轮","Tangalooma Island Resort Moreton Island"],
+   ["龙柏考拉保护区","D4 抱考拉 · 9:00-17:00","Lone Pine Koala Sanctuary 708 Jesmond Rd Fig Tree Pocket"],
+   ["冲浪者天堂海滩","D5-D7 住宿与留白","Surfers Paradise Beach"],
+   ["Chevron Renaissance（黄金海岸公寓·暂定）","D5-D7 住宿 · 楼下Coles","Chevron Renaissance Surfers Paradise"],
+   ["海洋世界（可选）","D6 方案A","Sea World Gold Coast Seaworld Drive Main Beach"],
+   ["Q1 SkyPoint 观景台（可选）","D7 白天 · 电梯直达","Q1 Building Surfers Paradise"],
+   ["春溪国家公园·自然桥","D7 晚 蓝光萤火虫","Natural Bridge Springbrook National Park"],
+   ["黄金海岸机场 OOL","D8 上午出发","Gold Coast Airport Coolangatta"],
+   ["Mantra Trilogy（凯恩斯公寓·暂定）","D8-D10 住宿","Mantra Trilogy Cairns"],
+   ["凯恩斯码头直升机场","D9 08:15 报到（报体重）","Cairns Heliport Pier Point Road"],
+   ["Prawn Star 船上海鲜","D8 晚餐","Prawn Star Cairns Marlin Marina"],
+   ["悉尼机场 SYD T1","D10 16:30 到达 / D12 09:10 出发","Sydney Kingsford Smith Airport Terminal 1"],
+   ["Meriton Suites World Tower（悉尼公寓·暂定）","D10-D12 住宿","Meriton Suites World Tower Sydney"],
+   ["悉尼歌剧院","D10晚《魔笛》/ D11上午导览","Sydney Opera House Bennelong Point"],
+   ["麦考利夫人椅子","歌剧院+大桥同框机位","Mrs Macquaries Chair Sydney"],
+   ["木棉 MuMian（达令港）","D11 午餐","MuMian Dining Darling Quarter Sydney"],
+   ["悉尼唐人街","D11 下午采购手信","Chinatown Sydney Dixon Street"],
+   ["深圳宝安机场 T3","D12 15:20 落地","深圳宝安国际机场T3航站楼"]],
+  checklist:{
+   must:["护照（有效期6个月+）","澳洲600签证批准信打印件×2","往返机票行程单","4城公寓订单","旅行保险单（含医疗）","儿童出生证明/亲属关系证明","信用卡（Visa/Mastercard）","澳元现金 AUD 300-500","手机+充电器"],
+   suggest:["儿童晕车药（飞行/渡轮/夜游/直升机）","退烧药/肠胃药/抗过敏药/创可贴","驱蚊液（凯恩斯热带）","SPF50+防晒霜（当地可补购Cancer Council）","宽檐防晒帽+太阳镜","轻薄外套（飞机/夜间/空调）","舒适步行鞋+凉鞋","澳标Type I转换插头×2-3","插线板","充电宝（≤100Wh随身）","澳洲4G/5G电话卡或漫游","保温水杯（直饮水可饮）","环保购物袋","洗衣液（公寓有洗烘）"],
+   personal:["（留给每位家庭成员自行填写：常用药品、护肤品、儿童安抚物、零食等）"],
+   todo:["澳洲600签证全家递签（立即，immi.homeaffairs.gov.au）","出票 CX153 香港→布里斯班（cathaypacific.com）","出票 CZ3072 悉尼→深圳（csair.com）","预订国内段：黄金海岸→凯恩斯、凯恩斯→悉尼","预订4城公寓（按核对清单查设施）","购买《魔笛》演出票（sydneyoperahouse.com 查2/2场次）","预订大堡礁直升机（提前2-4周，报体重）","预订摩顿岛海豚一日游（haitundao.cn，国庆日尽早）","预订萤火虫夜游中文团（Trip.com/KKday）","预订龙柏门票+抱考拉（lonelypine官网/KKday）","预订海洋世界门票（如选方案A）","购买旅行保险"],
+   cash:["澳元现金 AUD 300-500 应急（集市/小摊）","超AUD 10,000现金入境必须申报","部分小商户刷卡收1.5-3%手续费","唐人街/免税店可用银联"]},
+  pending:[
+   "《魔笛》场次与票价待查（2/2晚 vs 2/3晚；孩子时长耐受）",
+   "海洋世界 vs 全天留白（1/29，暂定海洋世界）",
+   "公寓4家比价预订 + 设施逐项核对",
+   "600签证办理进度",
+   "国内段机票比价（捷星/维珍/澳航）",
+   "候选景点是否升级（如库兰达雨林）"]}
+;
+/* ================= STATE ================= */
+const KEY="au_trip_v1";
+let ST={checks:{},done:{},edits:{},theme:null};
+try{ST=Object.assign(ST,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){}
+const save=()=>localStorage.setItem(KEY,JSON.stringify(ST));
+if(ST.theme){document.documentElement.dataset.theme=ST.theme}
+else if(matchMedia("(prefers-color-scheme:dark)").matches){document.documentElement.dataset.theme="dark"}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1600)}
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const chip=s=>s&&s!=="—"?`<span class="chip ${({"已确认":"s1","已预订":"s2","仅限现金":"s3","现场选择":"s4","可选":"s5","暂定":"s6"})[s]||"s5"}">${s}</span>`:"";
+const gmap=q=>`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+const amap=q=>`https://maps.apple.com/?q=${encodeURIComponent(q)}`;
+
+/* ================= THEME ================= */
+document.getElementById("themeBtn").onclick=()=>{
+  const cur=document.documentElement.dataset.theme==="dark"?"light":"dark";
+  document.documentElement.dataset.theme=cur;ST.theme=cur;save();
+};
+
+/* ================= COUNTDOWN & NEXT ================= */
+function tick(){
+  const diff=new Date(DATA.meta.start)-Date.now();
+  const cd=document.getElementById("countdown");
+  if(diff<=0){cd.innerHTML='<div style="font-size:16px;padding:10px 16px">旅程进行中 / 已结束 · 旅途愉快 🎉</div>';return}
+  const d=Math.floor(diff/864e5),h=Math.floor(diff/36e5)%24,m=Math.floor(diff/6e4)%60,s=Math.floor(diff/1e3)%60;
+  cdD.textContent=d;cdH.textContent=String(h).padStart(2,"0");cdM.textContent=String(m).padStart(2,"0");cdS.textContent=String(s).padStart(2,"0");
+}
+tick();setInterval(tick,1000);
+function nextSeg(){
+  const now=Date.now();
+  const starts={d1:new Date("2027-01-24T15:00:00+08:00"),d2:new Date("2027-01-25T10:45:00+10:00"),
+   d3:new Date("2027-01-26T07:30:00+10:00"),d4:new Date("2027-01-27T08:30:00+10:00"),
+   d5:new Date("2027-01-28T10:00:00+10:00"),d6:new Date("2027-01-29T09:00:00+10:00"),
+   d7:new Date("2027-01-30T09:00:00+10:00"),d8:new Date("2027-01-31T09:00:00+10:00"),
+   d9:new Date("2027-02-01T07:30:00+10:00"),d10:new Date("2027-02-02T09:00:00+10:00"),
+   d11:new Date("2027-02-03T09:30:00+11:00"),d12:new Date("2027-02-04T05:30:00+11:00")};
+  const el=document.getElementById("nextSeg");
+  for(const d of DATA.days){
+    if(now<starts[d.id]){
+      const first=d.items.find(i=>!ST.done[d.id+":"+i.t+i.n]);
+      el.innerHTML=`📌 下一段行程：<b>${d.date} ${d.title.split("·")[0].trim()}</b> — ${first?first.t+" "+esc(first.n):"当日已完成"}（还剩 ${Math.ceil((starts[d.id]-now)/864e5)} 天）`;
+      return;
+    }
+  }
+  el.innerHTML="🎉 全部行程已完成！";
+}
+nextSeg();setInterval(nextSeg,60000);
+
+/* ================= ROUTE ================= */
+document.getElementById("routeFlow").innerHTML=
+ ["🏠 深圳坪山","🇭🇰 香港机场 ✈CX153","🚢 布里斯班·摩顿岛海豚","🐨 龙柏考拉","🏖 黄金海岸·萤火虫","🚁 凯恩斯·大堡礁","🎭 悉尼·歌剧院《魔笛》","✈ CZ3072 深圳"]
+ .map((x,i,a)=>`<span style="font-weight:${i===0||i===a.length-1?700:500}">${x}</span>${i<a.length-1?' <span style="color:var(--sub)">→</span> ':""}`).join("")
+ +`<p style="font-size:12px;color:var(--sub);margin-top:8px">布里斯班进 · 悉尼出 · 不走回头路 · 国内段仅2飞，最长乘车1小时</p>`;
+document.getElementById("routeHotels").innerHTML=DATA.hotels.map(h=>
+ `<p>📍 <b>${h[0]}</b>（${h[1]}）：${h[2]} <span class="chip s6">暂定</span><br><span style="font-size:12px;color:var(--sub)">备选：${h[3]} · ${h[4]}</span></p>`).join("");
+
+/* ================= DAYS ================= */
+function renderDays(){
+  document.getElementById("daysList").innerHTML=DATA.days.map(d=>{
+    const done=d.items.filter(i=>ST.done[d.id+":"+i.t+i.n]).length;
+    const pct=Math.round(done/d.items.length*100);
+    return `<div class="card day ${pct===100?"alldone":""}">
+     <h3>${d.title}</h3>
+     <div class="dmeta">📅 ${d.date} · 👨‍👩‍👧‍👦 ${DATA.meta.people}全员 · ✅ ${done}/${d.items.length}</div>
+     <div class="progress"><i style="width:${pct}%"></i></div>
+     ${d.items.map(i=>{
+       const k=d.id+":"+i.t+i.n;
+       const it=ST.edits[k]||i;
+       return `<div class="item ${ST.done[k]?"done":""}">
+        <input type="checkbox" class="ck" data-k="${k}" ${ST.done[k]?"checked":""}>
+        <div class="itime">${esc(it.t)}</div>
+        <div class="ibody">
+          <div class="iname">${esc(it.n)} ${chip(it.s)}<button class="editbtn" data-edit="${k}">改</button></div>
+          <div class="itrans">🚗 ${esc(it.tr)}</div>
+          ${it.note?`<div class="inote">💡 ${esc(it.note)}</div>`:""}
+        </div></div>`}).join("")}
+    </div>`}).join("");
+  document.querySelectorAll(".ck[data-k]").forEach(c=>c.onchange=e=>{
+    ST.done[e.target.dataset.k]=e.target.checked;save();renderDays();nextSeg();
+  });
+  document.querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>{
+    const k=b.dataset.edit;const cur=ST.edits[k]||{t:"",n:"",tr:"",note:""};
+    const base=DATA.days.flatMap(d=>d.items.map(i=>[d.id+":"+i.t+i.n,i])).find(x=>x[0]===k)[1];
+    const t=prompt("修改时间：",cur.t||base.t);if(t===null)return;
+    const n=prompt("修改事项：",cur.n||base.n);if(n===null)return;
+    const tr=prompt("修改交通（工具+时长）：",cur.tr||base.tr);if(tr===null)return;
+    const note=prompt("修改提醒（留空清除）：",cur.note||base.note||"");if(note===null)return;
+    ST.edits[k]={t:t||base.t,n:n||base.n,tr:tr||base.tr,note:note||base.note,s:base.s};save();renderDays();toast("已保存（本机）");
+  });
+}
+renderDays();
+document.getElementById("editToggle").onclick=e=>{
+  const on=document.body.classList.toggle("editing");
+  e.target.textContent=`✏️ 编辑模式：${on?"开（点击事项旁「改」修改）":"关"}`;
+};
+document.getElementById("exportBtn").onclick=()=>{
+  const blob=new Blob([JSON.stringify(ST,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);
+  a.download="澳洲行程_我的修改_"+new Date().toISOString().slice(0,10)+".json";a.click();toast("已导出");
+};
+document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click();
+document.getElementById("importFile").onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();r.onload=()=>{try{ST=Object.assign(ST,JSON.parse(r.result));save();renderAll();toast("导入成功")}catch(x){toast("文件格式错误")}};
+  r.readAsText(f);
+};
+
+/* ================= TABLES ================= */
+document.getElementById("tblIntl").innerHTML=
+ `<tr><th>航段</th><th>航班</th><th>时刻</th><th>飞行</th><th>机型</th><th>状态</th><th>备注</th></tr>`+
+ DATA.intl.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${chip(r[5])}</td><td>${r[6]}</td></tr>`).join("");
+document.getElementById("tblLocal").innerHTML=
+ `<tr><th>段</th><th>方式</th><th>时长</th><th>费用（暂定）</th><th>状态</th></tr>`+
+ DATA.local.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${chip(r[4])}</td></tr>`).join("");
+document.getElementById("tblHotel").innerHTML=
+ `<tr><th>城市</th><th>晚数</th><th>首选（暂定）</th><th>备选</th><th>位置</th></tr>`+
+ DATA.hotels.map(h=>`<tr><td>${h[0]}</td><td>${h[1]}</td><td>${h[2]} <span class="chip s6">暂定</span></td><td>${h[3]}</td><td>${h[4]}</td></tr>`).join("");
+
+/* ================= POI & REST & SHOP ================= */
+document.getElementById("poiList").innerHTML=DATA.pois.map(p=>
+ `<div class="navcard" style="margin-bottom:10px"><b><a href="#nav" style="color:inherit;text-decoration:none">${p[0]}</a></b>
+  <div style="font-size:12px;color:var(--sub);width:100%">${p[1]} · 加法：${p[2]} · 交通：${p[3]}</div></div>`).join("");
+document.getElementById("restList").innerHTML=DATA.rests.map(r=>
+ `<div class="navcard" style="margin-bottom:10px"><b>${r[0]}</b> <span class="tag">${r[1]}</span>
+  <div style="font-size:12px;color:var(--sub);width:100%">${r[2]} · ${r[3]} · ${r[4]}</div>
+  <a class="mini" target="_blank" href="${gmap(r[5])}">🗺️ Google Maps</a>
+  <a class="mini" target="_blank" href="${amap(r[5])}">🍎 Apple Maps</a>
+  <button class="mini" data-copy="${r[0]} · ${r[1]} · ${r[4]}">📋 复制</button></div>`).join("");
+document.getElementById("shopList").innerHTML=DATA.shops.map(s=>
+ `<div class="navcard" style="margin-bottom:10px"><b>${s[0]}</b>
+  <div style="font-size:12px;color:var(--sub);width:100%">${s[1]} · ${s[2]}</div>
+  <span class="tag">🛒 ${s[3]}</span> <a class="mini" target="_blank" href="${s[4]}">🔗 打开店铺</a></div>`).join("");
+
+/* ================= NAV ================= */
+function renderNav(f=""){
+  const list=DATA.nav.filter(n=>(n[0]+n[1]+n[2]).toLowerCase().includes(f.toLowerCase()));
+  document.getElementById("navList").innerHTML=list.length?list.map(n=>
+   `<div class="card navcard" style="margin-bottom:10px"><b>${n[0]}</b>${chip(n[0].includes("暂定")?"暂定":"已确认")}
+    <div class="addr">📌 ${n[1]} · 地址：${n[2]}</div>
+    <a class="mini" target="_blank" href="${gmap(n[2])}">🗺️ Google Maps</a>
+    <a class="mini" target="_blank" href="${amap(n[2])}">🍎 Apple Maps</a>
+    <button class="mini" data-copy="${n[0]}：${n[2]}">📋 复制地址</button></div>`).join("")
+  :'<p style="color:var(--sub)">没有匹配的地点</p>';
+}
+document.getElementById("navSearch").oninput=e=>renderNav(e.target.value);
+renderNav();
+
+/* ================= CHECKLIST ================= */
+function renderCL(){
+  const cats=[["must","🎒 必带物品"],["suggest","💡 建议携带"],["personal","👤 个人携带"],["todo","✅ 出发前待办"],["cash","💵 现金准备"]];
+  document.getElementById("checklist").innerHTML=cats.map(([k,label])=>{
+    const items=DATA.checklist[k].map((it,idx)=>{
+      const key=k+":"+idx;
+      return `<div class="clrow"><input type="checkbox" class="ck" data-cl="${key}" ${ST.checks[key]?"checked":""}>
+       <span style="${ST.checks[key]?"text-decoration:line-through;color:var(--sub)":""}">${esc(it)}</span></div>`}).join("");
+    const done=DATA.checklist[k].filter((_,idx)=>ST.checks[k+":"+idx]).length;
+    const pct=Math.round(done/DATA.checklist[k].length*100);
+    return `<div class="card cl"><h4>${label} <span class="chip s5">${done}/${DATA.checklist[k].length}</span></h4>
+     <div class="progress"><i style="width:${pct}%"></i></div>${items}</div>`}).join("");
+  const all=[].concat(...cats.map(c=>DATA.checklist[c[0]].map((_,idx)=>c[0]+":"+idx)));
+  const dn=all.filter(x=>ST.checks[x]).length;
+  const bar=document.createElement("div");
+  document.getElementById("checklist").insertAdjacentHTML("afterbegin",
+   `<div class="card"><b>总进度</b><div class="progress" style="height:12px"><i style="width:${Math.round(dn/all.length*100)}%"></i></div>
+    <span class="ptext">${dn}/${all.length} 项完成</span></div>`);
+  document.querySelectorAll(".ck[data-cl]").forEach(c=>c.onchange=e=>{
+    ST.checks[e.target.dataset.cl]=e.target.checked;save();renderCL();
+  });
+}
+renderCL();
+
+/* ================= PENDING ================= */
+document.getElementById("pendingList").innerHTML=
+ DATA.pending.map((p,i)=>`<div class="clrow"><input type="checkbox" class="ck" data-pd="${i}">
+  <span>${esc(p)}</span></div>`).join("")
+ +`<p style="font-size:12px;color:var(--sub);margin-top:10px">全部解决后，此板块将从下一版网页中删除。</p>`;
+document.querySelectorAll(".ck[data-pd]").forEach(c=>c.onchange=e=>{
+  e.target.parentElement.style.opacity=e.target.checked?.5:1;
+});
+
+/* ================= COPY & MISC ================= */
+function copyText(t){navigator.clipboard.writeText(t).then(()=>toast("已复制")).catch(()=>toast("复制失败，请手动选择文字"))}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-copy]");if(b)copyText(b.dataset.copy)});
+const secIds=["home","route","days","trans","poi","nav","list","todo"];
+const obs=new IntersectionObserver(es=>{
+  es.forEach(en=>{if(en.isIntersecting){
+    document.querySelectorAll("nav.tabs a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id));}});
+},{rootMargin:"-120px 0px -60% 0px"});
+secIds.forEach(id=>obs.observe(document.getElementById(id)));
+function renderAll(){renderDays();renderCL();renderNav(document.getElementById("navSearch").value);nextSeg();tick()}
+</script>
+</body>
+</html>
